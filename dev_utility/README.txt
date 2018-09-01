@@ -16,7 +16,6 @@ this will download and install all of the node dependencies listed in the packag
 
 VERSION CONTROL OPTIONS:
 -GitHub Desktop (you might need to generate git credentials in the VSTS clone tab)
--Visual Studio built-in version control (View > SCM)
 -Console Commands: https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
 
 
