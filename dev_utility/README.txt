@@ -16,9 +16,13 @@ this will download and install all of the node dependencies listed in the packag
 
 VERSION CONTROL OPTIONS:
 -GitHub Desktop (you might need to generate git credentials in the VSTS clone tab)
+-Visual Studio Codes built-in version control.
 -Console Commands: https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
 
-
+DEVELOPMENT PROCESS:
+-Run: nodemon app.js
+    -Now everytime you change a file it will restart the server for you
+    -Ctrl+C in the terminal will prompt you to stop the server.
 
 
 
