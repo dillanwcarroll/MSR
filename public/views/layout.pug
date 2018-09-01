@@ -1,0 +1,16 @@
+doctype html
+html
+    head
+        title= title
+        link(rel="stylesheet", href="/styles/style.css")
+        block scripts
+            script(src="/scripts/global.js")
+    body
+        header
+            #title
+                img(src="assets/msr_logo.png", alt="The My School Remembers logo, a rainbow pinwheel")
+                h1(style="display:inline") My School Remembers
+                h2 things in the header are on every page
+        block content
+        footer
+            h2 and so are things in the footer
