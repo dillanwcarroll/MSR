@@ -1,16 +1,34 @@
 doctype html
 html
     head
-        title= title
+        title= title        
         link(rel="stylesheet", href="/styles/style.css")
-        block scripts
-            script(src="/scripts/global.js")
+        //-Materialize css
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="/materialize/min.css", type="text/css", media="screen,projection")
+    
     body
-        header
+        header.center-align
             #title
-                img(src="assets/msr_logo.png", alt="The My School Remembers logo, a rainbow pinwheel")
-                h1(style="display:inline") My School Remembers
-                h2 things in the header are on every page
-        block content
+                a(href="/")
+                    img#logo(src="assets/msr_logo.png", alt="The My School Remembers logo, a rainbow pinwheel")
+                h1 MY SCHOOL<br/>REMEMBERS
+            nav.nav-wrapper
+                ul.nav-mobile
+                    li
+                     a(href="/") HOME
+                    li
+                     a(href="/") ABOUT
+                    li
+                     a(href="/") EDUCATION
+                    li
+                     a(href="/") CONTACT
+        .container
+            block content
+
         footer
             h2 and so are things in the footer
+        block scripts
+            script(src="/scripts/global.js")
+            //-Materialize js
+            script(src="/materialize/min.js")

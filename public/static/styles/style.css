@@ -1,3 +1,43 @@
-*{
-    color: brown;
+/*--TITLE--*/
+#title{
+    display: inline-block;
+    margin: 5px;
+    line-height: 0.85em;
+    font-size: 8vw;
+}
+@media (min-width: 1000px){
+    #title{
+       font-size: 80px; 
+    }
+}
+#title h1{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    color: #333330;
+    font-family: impact;
+    text-align: justify;
+    font-size: inherit;
+    line-height: inherit;
+
+    text-shadow: 1px 2px 2px #33333083
+}
+#title #logo{
+    margin: 0;
+    padding-right: 5px;
+    height: 1.6em;
+    animation: spin 8s linear 0s infinite reverse;
+    animation-play-state: paused;
+}
+#title #logo:hover{
+    animation-play-state: running;
+}
+@keyframes spin {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+  }
+/*----*/
+.nav-mobile{
+    display: inline-block;
 }
