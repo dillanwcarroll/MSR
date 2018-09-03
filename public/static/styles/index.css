@@ -1,0 +1,99 @@
+section {
+    width: 100%;
+    background-color: #cecece;
+    box-shadow: 0px 2px 3px #919191;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+/*--SEARCH--*/
+#search{
+    padding: 10px 0 10px 0;
+    color: #333330;
+}
+#search h1{
+    font-size: 31.5px;
+    text-align: center;
+    margin: 5px;
+}
+#search form{
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;  
+}
+#search-box{
+    width: 85%;
+    height: 40px;
+    border: none;
+    box-shadow: inset 0px 0px 7px 0px #494949;
+}
+#search-box:focus{
+    outline: none;
+    background-color: rgb(236, 216, 179);
+    transition: transform .2s;
+}
+input[type="search"]{
+    font-size: 30px;
+    text-align: center;
+}
+input[type="submit"]{
+    font-size: 30px;
+}
+#search-btn{
+    width: 15%;
+    height: 40px;
+    border: none;
+    color: #333330;
+    background-color: #EDC881;
+}
+#search-btn:hover{
+    background-color:#E7B56B;
+    transition: background-color .3s;
+}
+#search-btn:focus{
+    outline: none;   
+    transform: scale(1.05); 
+}
+/*--RESEARCH-LINKS--*/
+#links {
+    display: table;
+}
+.card{
+    display: table-cell;
+    width: 25%;
+    color: #333330;
+}
+.card:hover{
+    background-color: #b3b3b3;
+    transition: background-color .2s;
+    transition: transform .2s;
+    transform: scale(1.01);
+}
+.card img{
+    width: 84%;
+    margin: 8% 8% 0 8%;
+    box-shadow: 0px 2px 3px #919191;
+    border-radius: 25px;
+}
+.card h2{
+    text-align: center;
+    vertical-align: middle;
+    min-height: 2.3em;
+    padding: 5px 10px 5px 10px;
+    margin: 0;
+    font-size: 1.2em
+}
+.card p{
+    padding: 5px 10px 10px 10px;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+}
+@media (max-width: 1000px){
+    .card h2{
+        font-size: 1em; 
+    }
+    .card p{
+       font-size: 13px; 
+    }
+}

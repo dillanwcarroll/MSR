@@ -1,37 +1,36 @@
 doctype html
 html
     head
-        title= title        
-        link(rel="stylesheet", href="/styles/style.css")
-        link(href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet")
-        //-Bootstrap css
-        link(rel="stylesheet", href="/bootstrap/min.css")
+        title= title
+        block styles     
+            link(rel="stylesheet", href="/styles/style.css")
+            link(href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet")
     body
         header
             #title
                 a(href="/")
                     img#logo(src="assets/msr_logo.png", alt="The My School Remembers logo, a rainbow pinwheel")
-                h1 MY SCHOOL<br/>REMEMBERS
+                    h1 MY SCHOOL<br/>REMEMBERS
             ul.nav
-                a.nav-item.nav-link(href="/")
-                    p HOME
-                a.nav-item.nav-link(href="/")
-                    p ABOUT
-                a.nav-item.nav-link(href="/") 
-                    p SEARCH
-                a.nav-item.nav-link(href="/")
-                    p EDUCATION
-                a.nav-item.nav-link(href="/")
-                    p CONTACT
-        .container
-            block content
-
+                a.nav-item(href="/")
+                    p.nav-content HOME
+                a.nav-item(href="/")
+                    p.nav-content ABOUT
+                a.nav-item(href="/search") 
+                    p.nav-content SEARCH
+                a.nav-item(href="/")
+                    p.nav-content EDUCATION
+                a.nav-item(href="/")
+                    p.nav-content CONTACT
+        content
+            .container
+                block content
         footer
             ul.nav
-                a.nav-item.nav-link(href="/")
-                    p Privcy Policy
+                a.nav-item(href="/")
+                    p.nav-content Privacy Policy
                 .nav-item 
-                    .p &copy; 2018 My School Remembers
+                    p.nav-content &copy; 2018 My School Remembers
         block scripts
             script(src="/scripts/global.js")
             //-Bootstrap js//

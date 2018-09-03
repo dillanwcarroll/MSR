@@ -1,0 +1,15 @@
+extends layout.pug
+
+prepend styles
+    link(rel="stylesheet", href="/styles/index.css")
+
+prepend scripts
+    //-script(src="/scripts/FILENAME.js")
+
+block content
+    //-CONTENT-STARTS-HERE-//
+    section#search
+        h1 Enter your suburb below and discover your areas brave history:
+        form(action="/search", method="get")
+            input#search-box(type="search", name="term", placeholder="i.e. 3122", onblur="placeholder='i.e. 3122'", onfocus="placeholder=''")
+            input#search-btn(type="submit", value="search")
