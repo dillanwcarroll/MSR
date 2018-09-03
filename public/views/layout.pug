@@ -1,16 +1,33 @@
 doctype html
 html
     head
-        title= title
+        title= title        
         link(rel="stylesheet", href="/styles/style.css")
-        block scripts
-            script(src="/scripts/global.js")
+        link(href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet")
+        //-Bootstrap css
+        link(rel="stylesheet", href="/bootstrap/min.css")
     body
         header
             #title
-                img(src="assets/msr_logo.png", alt="The My School Remembers logo, a rainbow pinwheel")
-                h1(style="display:inline") My School Remembers
-                h2 things in the header are on every page
-        block content
+                a(href="/")
+                    img#logo(src="assets/msr_logo.png", alt="The My School Remembers logo, a rainbow pinwheel")
+                h1 MY SCHOOL<br/>REMEMBERS
+            ul.nav
+                a.nav-item.nav-link(href="/")
+                    p HOME
+                a.nav-item.nav-link(href="/")
+                    p ABOUT
+                a.nav-item.nav-link(href="/") 
+                    p EDUCATION
+                a.nav-item.nav-link(href="/")
+                    p CONTACT
+        .container
+            block content
+
         footer
             h2 and so are things in the footer
+        block scripts
+            script(src="/scripts/global.js")
+            //-Bootstrap js
+            script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=", crossorigin="anonymous")
+            script(src="/bootstrap/min.js")
