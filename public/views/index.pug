@@ -7,22 +7,30 @@ prepend scripts
     script(src="/scripts/index.js")
 
 block content
-    section#research
+    section#search
+        h1 Enter your suburb below and discover your areas brave history:
+        form(action="/search", method="get")
+            input#search-box(type="search", name="term", placeholder="i.e. 3122", onblur="placeholder='i.e. 3122'", onfocus="placeholder=''")
+            input(type="hidden", name="mode", value="suburb")
+            input#search-btn(type="submit", value="search")
+
+
+    section#links
         a.card(href="https://www.aif.adfa.edu.au/index.html")
             img(src="/assets/aif_logo.jpg", alt="")
-            h3 AIF Project
-            p The AIF database is drawn from a range of official sources, including personalfiles on the National Archives website, and Embarkation and Nominal Rolls on the Australian War Memorial website.
-        a.card(href="")
+            h2 AIF Project
+            p An officially sourced database, including personal files, Embarkation and Nominal Rolls.
+        a.card(href="https://www.awm.gov.au/")
             img(src="/assets/awm_logo.jpg", alt="")
-            h3 Australian War Memorial
-            p The Memorial's purpose is to commemorate the sacrifice of those Australians who have died in war. Its mission is to assist Australians to remember, interpret and understand the Australian experience of war and its enduring impact on Australian society.
-        a.card(href="")
+            h2 Australian War Memorial
+            p The Australian War Memorial combines a shrine, a world-class museum, and an extensive archive.
+        a.card(href="http://www.naa.gov.au/")
             img(src="/assets/naa_logo.jpg", alt="")
-            h3 National Archives Australia
-            p The National Archives of Australia can best be described as the memory of our nation – collecting and preserving Australian Government records that reflect our history and identity.
-        a.card(href="")
+            h2 National Archives Australia
+            p The National Archives of Australia collects and preserves Australian Government records that reflect our history and identity.
+        a.card(href="https://trove.nla.gov.au/")
             img(src="/assets/trove_logo.png", alt="")
-            h3 Trove
-            p Trove helps you find and use resources relating to Australia. Trove brings together content from libraries, museums, archives, repositories and other research and collecting organisations big and small.
+            h2 Trove
+            p Trove brings together content from libraries, museums, archives, and other collecting organisations big and small.
 
 

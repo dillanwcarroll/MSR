@@ -1,5 +1,6 @@
 /*--BODY--*/
 body{
+    background-color: #f1f1f1;
     padding: 0px;
     margin: 0px;
     font-family: 'Raleway', sans-serif;
@@ -15,6 +16,7 @@ a{
 header{
     text-align: center;
     margin-bottom: 20px;
+    
 }
 /*--TITLE--*/
 #title{
@@ -83,8 +85,8 @@ header .nav .nav-item:hover{
 }
 /*--CONTAINER--*/
 .container{
-    max-width: 1200px;
-    width: 90%;
+    max-width: 1000px;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
 }

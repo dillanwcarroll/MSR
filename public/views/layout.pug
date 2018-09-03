@@ -10,7 +10,7 @@ html
             #title
                 a(href="/")
                     img#logo(src="assets/msr_logo.png", alt="The My School Remembers logo, a rainbow pinwheel")
-                h1 MY SCHOOL<br/>REMEMBERS
+                    h1 MY SCHOOL<br/>REMEMBERS
             ul.nav
                 a.nav-item(href="/")
                     p.nav-content HOME
@@ -22,9 +22,9 @@ html
                     p.nav-content EDUCATION
                 a.nav-item(href="/")
                     p.nav-content CONTACT
-        .container
-            block content
-
+        content
+            .container
+                block content
         footer
             ul.nav
                 a.nav-item(href="/")
