@@ -24,6 +24,7 @@ DEVELOPMENT PROCESS:
     -Now everytime you change a file it will restart the server for you
     -Ctrl+C in the terminal will prompt you to stop the server.
 
-
+CLONE BRANCH:
+git clone -b BRANCHNAME https://memorabledillan.visualstudio.com/TeamD/_git/msr_node_d
 
     

@@ -3,26 +3,24 @@ html
     head
         title= title        
         link(rel="stylesheet", href="/styles/style.css")
-        //-Materialize css
-        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
-        link(rel="stylesheet", href="/materialize/min.css", type="text/css", media="screen,projection")
-    
+        link(href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet")
+        //-Bootstrap css
+        link(rel="stylesheet", href="/bootstrap/min.css")
     body
-        header.center-align
+        header
             #title
                 a(href="/")
                     img#logo(src="assets/msr_logo.png", alt="The My School Remembers logo, a rainbow pinwheel")
                 h1 MY SCHOOL<br/>REMEMBERS
-            nav.nav-wrapper
-                ul.nav-mobile
-                    li
-                     a(href="/") HOME
-                    li
-                     a(href="/") ABOUT
-                    li
-                     a(href="/") EDUCATION
-                    li
-                     a(href="/") CONTACT
+            ul.nav
+                a.nav-item.nav-link(href="/")
+                    p HOME
+                a.nav-item.nav-link(href="/")
+                    p ABOUT
+                a.nav-item.nav-link(href="/") 
+                    p EDUCATION
+                a.nav-item.nav-link(href="/")
+                    p CONTACT
         .container
             block content
 
@@ -30,5 +28,6 @@ html
             h2 and so are things in the footer
         block scripts
             script(src="/scripts/global.js")
-            //-Materialize js
-            script(src="/materialize/min.js")
+            //-Bootstrap js
+            script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=", crossorigin="anonymous")
+            script(src="/bootstrap/min.js")
