@@ -14,3 +14,7 @@ router.get('/search', (req, res) => {
 router.get('/about', (req, res) => {
     res.render('about', {title: 'My School Remembers'})
 })
+
+router.get('/contact', (req, res) => {
+    res.render('contact', {title: 'My School Remembers'})
+})
