@@ -10,3 +10,7 @@ router.get('/', (req, res) => {
 router.get('/search', (req, res) => {
     res.render('search', {title: 'My School Remembers'})
 })
+
+router.get('/about', (req, res) => {
+    res.render('about', {title: 'My School Remembers'})
+})
