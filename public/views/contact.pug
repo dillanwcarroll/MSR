@@ -1,0 +1,30 @@
+extends layout.pug
+
+append styles
+    link(rel="stylesheet", href="/styles/contact.css")
+
+prepend scripts
+    //-script(src="/scripts/FILENAME.js")
+
+block content
+    //-CONTENT
+    section#contacts
+        h2 Get in contact
+
+        div#contactsLeft
+            form#contactForm(action="/messageSent", method="get" onsubmit="this.submit(); this.reset(); return false;")
+                h3#Name Name
+                input(type="text" name="name")
+                h3#email Email
+                input(type="email" name="email")
+                h3#subject Subject
+                input(type="text" name="subject")
+                h3#message Message
+                textarea(cols="30", rows="10" name="message")
+                h3
+                input#button(type="submit", value="Send") 
+
+        div#contactsRight
+            h4 Phone number: (+61)234 555 798
+            h4 Some other infomation
+            h4 Yeeee

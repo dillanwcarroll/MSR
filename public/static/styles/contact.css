@@ -1,0 +1,46 @@
+h2{
+    font-size: 42px
+}
+
+h3{
+    font-size: 20px;
+    margin-bottom: 4px; 
+}
+
+textarea{
+    width: 500px;
+}
+
+#contactsLeft{
+    float: left;
+  width: 60%;
+  overflow: hidden;
+}
+
+#contactsRight{
+    padding-left: 10%;
+    overflow: hidden;
+}
+
+input{
+    font-size: 16px;
+    width: 40%;
+}
+
+#button{
+    background-color: rgb(211, 147, 29);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    height: 46px;
+    width: 128px;
+    font-size: 16px;
+
+}
+#button:hover{
+    background-color:#EDC881;
+    transition: background-color .3s;
+}
