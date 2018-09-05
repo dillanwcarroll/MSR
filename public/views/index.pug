@@ -7,12 +7,12 @@ prepend scripts
     script(src="/scripts/index.js")
 
 block content
-    section#search
+    section#search.box-shadow
         h1 Enter your suburb below and discover your areas brave history:
         form(action="/search", method="get")
             input#search-box(type="search", name="term", placeholder="i.e. 3122", onblur="placeholder='i.e. 3122'", onfocus="placeholder=''")
             input#search-btn(type="submit", value="search")
-    section#links
+    section#links.box-shadow
         a.card(href="https://www.aif.adfa.edu.au/index.html")
             img(src="/assets/aif_logo.jpg", alt="")
             h2 AIF Project
@@ -29,5 +29,3 @@ block content
             img(src="/assets/trove_logo.png", alt="")
             h2 Trove
             p Trove brings together content from libraries, museums, archives, and other collecting organisations big and small.
-
-
