@@ -18,3 +18,8 @@ router.get('/about', (req, res) => {
 router.get('/contact', (req, res) => {
     res.render('contact', {title: 'My School Remembers'})
 })
+
+router.get('/messageSent', (req, res) => {
+    console.log(req.params[0])
+    res.render('messageSent', {title: 'My School Remembers'})
+})
