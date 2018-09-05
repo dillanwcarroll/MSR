@@ -11,5 +11,20 @@ block content
     section#contacts
         h2 Get in contact
 
-        h3 Email: email@mail.com
-        h3 Phone: (+61)234 555 789
+        div#contactsLeft
+            form#contactForm(action="")
+                h3#Name Name
+                input(type="text")
+                h3#email Email
+                input(type="email")
+                h3#subject Subject
+                input(type="text")
+                h3#message Message
+                textarea(name="", cols="30", rows="10")
+                h3
+                input#button(type="submit", value="Send") 
+
+        div#contactsRight
+            h4 Phone number: (+61)234 555 798
+            h4 Some other infomation
+            h4 Yeeee
