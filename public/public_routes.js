@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-var bodyParser = require('bodyParser')
+
 module.exports = router
 
 //routes
@@ -21,6 +21,6 @@ router.get('/contact', (req, res) => {
 })
 
 router.get('/messageSent', (req, res) => {
-    console.log(req.params[0])
-    res.render('messageSent', {title: 'My School Remembers'})
+    req.query.title = 'My School Remembers'
+    res.render('messageSent', req.query)
 })

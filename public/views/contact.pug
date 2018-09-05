@@ -12,7 +12,7 @@ block content
         h2 Get in contact
 
         div#contactsLeft
-            form#contactForm(action="/messageSent", method="get")
+            form#contactForm(action="/messageSent", method="get" onsubmit="this.submit(); this.reset(); return false;")
                 h3#Name Name
                 input(type="text" name="name")
                 h3#email Email
