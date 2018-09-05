@@ -23,3 +23,6 @@ router.get('/contact', (req, res) => {
 router.get('/messageSent', (req, res) => {
     res.render('messageSent', req.query)
 })
+router.get('/slideshow', (req, res) => {
+    res.render('slideshow', req.query)
+})
