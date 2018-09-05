@@ -1,0 +1,25 @@
+extends layout.pug
+
+prepend styles
+    link(rel="stylesheet", href="/styles/login.css")
+
+prepend scripts
+    //-script(src="/scripts/FILENAME.js")
+
+block content
+    //-CONTENT-STARTS-HERE-//
+    section
+        h1 Login Below:
+        form(method='', action='')
+            
+            label(style='font-weight:bold') Email:
+            
+            input(type='email', name='email', placeholder='email')
+            
+            label(style='font-weight:bold') Password:
+            
+            input(type='password', name='password', placeholder='********')
+
+            input(type='button', value='Login!', class='button', style='font-weight:bold')
+        
+        
