@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+var bodyParser = require('bodyParser')
 module.exports = router
 
 //routes
