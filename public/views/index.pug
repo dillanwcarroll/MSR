@@ -2,17 +2,18 @@ extends layout.pug
 
 prepend styles
     link(rel="stylesheet", href="/styles/index.css")
+    link(rel="stylesheet", href="/styles/search.css")
 
 prepend scripts
     script(src="/scripts/index.js")
 
 block content
-    section#search.box-shadow
-        h1 Enter your suburb below and discover your areas brave history:
+    section#search
+        h1.title Enter your suburb below and discover your areas brave history:
         form(action="/search", method="get")
             input#search-box(type="search", name="term", placeholder="i.e. 3122", onblur="placeholder='i.e. 3122'", onfocus="placeholder=''")
             input#search-btn(type="submit", value="search")
-    section#links.box-shadow
+    section#links
         a.card(href="https://www.aif.adfa.edu.au/index.html")
             img(src="/assets/aif_logo.jpg", alt="")
             h2 AIF Project

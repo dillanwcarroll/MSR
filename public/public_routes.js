@@ -5,22 +5,21 @@ module.exports = router
 
 //routes
 router.get('/', (req, res) => {
-    res.render('index', { title: 'My School Remembers' })
+    res.render('index')
 })
 
 router.get('/search', (req, res) => {
-    res.render('search', {title: 'My School Remembers'})
+    res.render('search')
 })
 
 router.get('/about', (req, res) => {
-    res.render('about', {title: 'My School Remembers'})
+    res.render('about')
 })
 
 router.get('/contact', (req, res) => {
-    res.render('contact', {title: 'My School Remembers'})
+    res.render('contact')
 })
 
 router.get('/messageSent', (req, res) => {
-    req.query.title = 'My School Remembers'
     res.render('messageSent', req.query)
 })
