@@ -24,6 +24,11 @@ router.get('/messageSent', (req, res) => {
     res.render('messageSent', req.query)
 })
 
+<<<<<<< HEAD
 router.get('/login', (req, res) => {
     res.render('login')
+=======
+router.get('/portfolio', (req, res) => {
+    res.render('portfolio')
+>>>>>>> 01f5a2934e859a2124ca713a1c72b5bc434fc769
 })
