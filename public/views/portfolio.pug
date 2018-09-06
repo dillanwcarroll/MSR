@@ -1,0 +1,39 @@
+extends layout.pug
+  
+prepend styles
+    link(rel="stylesheet", href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css")
+    link(rel="stylesheet", href="/styles/portfolio.css")
+
+prepend scripts
+    script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+    script(src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js")
+    script(type="text/javascript").
+
+        var $r = $('input[type="range"]');
+        var $ruler = $('<div class="rangeslider__ruler" />');
+
+        // Initialize
+        $r.rangeslider({
+        polyfill: false,
+        onInit: function() {
+            $ruler[0].innerHTML = getRulerRange(this.min, this.max, this.step);
+            this.$range.prepend($ruler);}
+        });
+
+        function getRulerRange(min, max, step) {
+        var range = '';
+        var i = 0;
+        
+        while (i <= max) {
+            range += i + ' ';
+            i = i + step;
+        }
+        return range;
+        }
+
+block content
+    section
+        h1 rangeslider
+        input(type="range" min="1914" max="1917" step="1")
+            
+           
