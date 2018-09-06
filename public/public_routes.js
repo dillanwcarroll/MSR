@@ -23,3 +23,7 @@ router.get('/contact', (req, res) => {
 router.get('/messageSent', (req, res) => {
     res.render('messageSent', req.query)
 })
+
+router.get('/login', (req, res) => {
+    res.render('login')
+})

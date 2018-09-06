@@ -1,25 +1,32 @@
 extends layout.pug
 
-prepend styles
+append styles
     link(rel="stylesheet", href="/styles/login.css")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+        crossorigin="anonymous")
+  
 
 prepend scripts
-    //-script(src="/scripts/FILENAME.js")
+    script(src="/scripts/login.js")
 
 block content
     //-CONTENT-STARTS-HERE-//
-    section
-        h1 Login Below:
-        form(method='', action='')
-            
-            label(style='font-weight:bold') Email:
-            
-            input(type='email', name='email', placeholder='email')
-            
-            label(style='font-weight:bold') Password:
-            
-            input(type='password', name='password', placeholder='********')
+    body
+        section
+            h1 Login Below
+            form(method='', action='')   
+                label.labelE(style='font-weight:bold') Email
+                //-email box below-//
+                input.email(type='email', name='email', placeholder='email') 
+                
+                label.labelP(style='font-weight:bold') Password
+                //-password box -//
+                input#password.password(type='password', name='password', placeholder='********')
+                //-<i class="fas fa-eye btn-show-hide-pwd"></i>
+                i#btn-show-hide-pwd(class="fas fa-eye btn-show-hide-pwd", data-for="password")
+                //-login button-//
+                input.submit(type='submit', value='LOGIN', class='button', style='font-weight:bold')
 
-            input(type='button', value='Login!', class='button', style='font-weight:bold')
         
         
