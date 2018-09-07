@@ -15,9 +15,9 @@ block content
         div#map
 
         div#timeline
-            div#years
-
-            input#slider(name="timeline" type="range" min="1" max="5" value="1")
+            div#text
+                h3#textBox(name="text" type="text" value="")
+            input#slider(name="timeline" type="range" min="1" max="16" value="1" onchange="updateTextInput(this.value - 1, this.max);")
 
     section#infoSide
         div#basicInfo

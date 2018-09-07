@@ -25,7 +25,7 @@
 #map{
     visibility: visible;
     
-    height: 700px;
+    height: 550px;
 }
 
 #basicInfo{
@@ -50,12 +50,38 @@
 
 }
 
+#timeline{
+    width: 42%;
+    background-color: aquamarine;
+    position: absolute;
+}
+
+#text{
+    
+    
+    
+}
+
+#text h3{
+    text-align: center;
+    position: relative;
+    left: 0%;
+    background-color: lavender;
+    width: 8%;
+    margin-left: 7.6%;
+    margin-bottom: 3px;
+    margin-top: 6px;
+    font-size: 100%;
+    font-family: monospace;
+}
+
 /* The slider itself */
 #slider {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
     margin-left: 10%;
     width: 80%; /* Full-width */
+    margin-right: 10%;
     height: 25px; /* Specified height */
     background: #d3d3d3; /* Grey background */
     outline: none; /* Remove outline */
@@ -73,7 +99,7 @@
 #slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
-    width: 25px; /* Set a specific slider handle width */
+    width: 4%; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
     background: #4CAF50; /* Green background */
     cursor: pointer; /* Cursor on hover */
