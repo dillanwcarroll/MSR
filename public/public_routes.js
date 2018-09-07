@@ -26,3 +26,7 @@ router.get('/messageSent', (req, res) => {
 router.get('/slideshow', (req, res) => {
     res.render('slideshow', req.query)
 })
+
+router.get('/portfolio', (req, res) => {
+    res.render('portfolio', req.query)
+})

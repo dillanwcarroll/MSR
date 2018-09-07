@@ -28,12 +28,22 @@
     height: 550px;
 }
 
+#mapFootnote{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 6px;
+    font-family: monospace;
+}
+
 #basicInfo{
-    height: 100px;
+    height: 300px;
+    
 }
 
 #basicInfo img{
-    width: 45%;
+    max-height: 100%;
+    width: 55%;
     display: block;
     height: auto;
     float: left;
@@ -41,8 +51,8 @@
 }
 
 #basicInfo text{
-    width: 55%;
-    height: 300px;
+    width: 45%;
+    height: 100%;
     float: right;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -54,12 +64,6 @@
     width: 42%;
     background-color: aquamarine;
     position: absolute;
-}
-
-#text{
-    
-    
-    
 }
 
 #text h3{
@@ -110,5 +114,9 @@
     height: 25px; /* Slider handle height */
     background: #4CAF50; /* Green background */
     cursor: pointer; /* Cursor on hover */
+}
+
+.slideshow{
+    width: 98%;
 }
 
