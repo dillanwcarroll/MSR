@@ -42,8 +42,9 @@
 }
 
 #basicInfo img{
+    padding: 2%;
     max-height: 100%;
-    width: 55%;
+    width: 51%;
     display: block;
     height: auto;
     float: left;
@@ -51,7 +52,8 @@
 }
 
 #basicInfo text{
-    width: 45%;
+    padding: 2%;
+    width: 41%;
     height: 100%;
     float: right;
     overflow-y: scroll;
@@ -117,6 +119,36 @@
 }
 
 .slideshow{
-    width: 98%;
+    padding: 2%;
+    width: 96%;
 }
 
+#titleBar{
+    text-align: right;
+    margin-right: 6%;
+    margin-left: 6%;
+}
+
+#vetName{
+    float: left;
+    margin-top: 0px;
+}
+
+#titleBar ul{
+    list-style: none;
+    position: relative;
+    height: 40px;
+}
+
+#titleBar .nav{
+    text-align: right;
+}
+
+#titleBar .nav-item .nav-content{
+    margin-top: 12px;
+}
+
+#titleBar .nav .nav-item:hover{
+    background-color:#E7B56B;
+    transition: background-color .3s;
+}
