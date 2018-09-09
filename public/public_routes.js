@@ -31,3 +31,7 @@ router.get('/login', (req, res) => {
 router.get('/portfolio', (req, res) => {
     res.render('portfolio')
 })
+
+router.get('/privacy', (req, res) => {
+    res.render('privacy')
+})
