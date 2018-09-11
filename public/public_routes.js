@@ -23,10 +23,19 @@ router.get('/contact', (req, res) => {
 router.get('/messageSent', (req, res) => {
     res.render('messageSent', req.query)
 })
+
+router.get('/login', (req, res) => {
+    res.render('login')
+})
+
 router.get('/slideshow', (req, res) => {
     res.render('slideshow', req.query)
 })
 
 router.get('/portfolio', (req, res) => {
     res.render('portfolio', req.query)
+})
+
+router.get('/privacy', (req, res) => {
+    res.render('privacy')
 })
