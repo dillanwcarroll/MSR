@@ -1,0 +1,49 @@
+extends layout.pug
+
+append styles
+    link(rel="stylesheet", href="/styles/slideshow.css")
+    link(rel="stylesheet", href="/styles/portfolio.css")
+    link(rel="stylesheet", href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css')
+    //-link(rel="stylesheet", href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css')
+prepend scripts
+    //-script(src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js')
+    script(src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js')
+    script(src='/scripts/slideshow.js')
+    script(src="/scripts/portfolio.js")
+    script(src="/scripts/map.js")
+
+block content
+    header#titleBar
+        ul.nav.box-shadow
+                li
+                    h1#vetName Dude McGuy
+                
+                a.nav-item(href="/")
+                    p.nav-content Roll of Honour
+                a.nav-item(href="")
+                    p.nav-content AIF Profile
+                a.nav-item(href="") 
+                    p.nav-content Newspaper Obituary
+    section#mapSide(onload="")
+        div#map
+
+        div#timeline
+            h3#mapFootnote Sample Text
+
+            div#text
+                h3#textBox(name="text" type="text" value="")
+            input#slider(name="timeline" type="range" min="1" max="16" value="1" onchange="updateTextInput(this.value - 1, this.max);")
+
+    section#infoSide
+        div#basicInfo
+            div#img
+                img.box-shadow(src="assets/AboutImage1.png")
+
+            text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iure soluta quam cum corporis tempore unde ipsam labore possimus qui. Molestias, ullam nam in fugit optio recusandae doloremque praesentium quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quisquam enim quaerat sed expedita iure iusto architecto eveniet a, sunt magni obcaecati, ipsam dolor nulla voluptatibus fuga eos delectus est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, libero assumenda, voluptatem exercitationem itaque autem nam quia aliquam ratione ipsam pariatur? Voluptatem eos debitis distinctio amet, sit accusamus inventore corporis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iure soluta quam cum corporis tempore unde ipsam labore possimus qui. Molestias, ullam nam in fugit optio recusandae doloremque praesentium quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quisquam enim quaerat sed expedita iure iusto architecto eveniet a, sunt magni obcaecati, ipsam dolor nulla voluptatibus fuga eos delectus est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, libero assumenda, voluptatem exercitationem itaque autem nam quia aliquam ratione ipsam pariatur? Voluptatem eos debitis distinctio amet, sit accusamus inventore corporis.
+        .slideshow
+            input.slide-plus(type="button", value=">")
+            input.slide-minus(type="button", value="<")
+            .slide(style="background-image: url('/assets/slideshow/1.jpg');")
+            .slide(style="background-image: url('/assets/slideshow/2.jpg');")
+            .slide(style="background-image: url('/assets/slideshow/3.jpg');")
+            .slide(style="background-image: url('/assets/slideshow/4.jpg');") 

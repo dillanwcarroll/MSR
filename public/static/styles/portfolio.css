@@ -1,0 +1,154 @@
+.container{
+    display: inline-block;
+    max-width: none;
+    width: 100%;
+}
+
+#mapSide{
+    float: left;
+    width: 42%;
+    margin-left: 6%;
+    height: 100%;
+    overflow: auto;
+
+    background-color: aqua
+}
+
+#infoSide{
+    float: right;
+    overflow: hidden;
+    background-color: lightgreen;
+    margin-right: 6%;
+    width: 42%;
+}
+
+#map{
+    visibility: visible;
+    
+    height: 550px;
+}
+
+#mapFootnote{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 6px;
+    font-family: monospace;
+}
+
+#basicInfo{
+    height: 300px;
+    
+}
+
+#basicInfo img{
+    padding: 2%;
+    max-height: 100%;
+    width: 51%;
+    display: block;
+    height: auto;
+    float: left;
+    background-color: antiquewhite;
+}
+
+#basicInfo text{
+    padding: 2%;
+    width: 41%;
+    height: 100%;
+    float: right;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: indianred;
+
+}
+
+#timeline{
+    width: 42%;
+    background-color: aquamarine;
+    position: absolute;
+}
+
+#text h3{
+    text-align: center;
+    position: relative;
+    left: 0%;
+    background-color: lavender;
+    width: 8%;
+    margin-left: 7.6%;
+    margin-bottom: 3px;
+    margin-top: 6px;
+    font-size: 100%;
+    font-family: monospace;
+}
+
+/* The slider itself */
+#slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    margin-left: 10%;
+    width: 80%; /* Full-width */
+    margin-right: 10%;
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+#slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 4%; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+#slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slideshow{
+    padding: 2%;
+    width: 96%;
+}
+
+#titleBar{
+    text-align: right;
+    margin-right: 6%;
+    margin-left: 6%;
+}
+
+#vetName{
+    float: left;
+    margin-top: 0px;
+}
+
+#titleBar ul{
+    list-style: none;
+    position: relative;
+    height: 40px;
+}
+
+#titleBar .nav{
+    text-align: right;
+}
+
+#titleBar .nav-item .nav-content{
+    margin-top: 12px;
+}
+
+#titleBar .nav .nav-item:hover{
+    background-color:#E7B56B;
+    transition: background-color .3s;
+}
