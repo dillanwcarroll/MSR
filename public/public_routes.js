@@ -1,4 +1,5 @@
 const express = require('express')
+const dataAccess = require(__dirname + '/data_access')
 const router = express.Router()
 
 module.exports = router
@@ -21,7 +22,7 @@ router.get('/contact', (req, res) => {
 })
 
 router.get('/messageSent', (req, res) => {
-    res.render('messageSent', req.query)
+    res.render('messageSent')
 })
 
 router.get('/login', (req, res) => {
@@ -29,11 +30,15 @@ router.get('/login', (req, res) => {
 })
 
 router.get('/slideshow', (req, res) => {
-    res.render('slideshow', req.query)
+    res.render('slideshow')
 })
 
-router.get('/portfolio', (req, res) => {
-    res.render('portfolio', req.query)
+router.get('/portfolio/:id', (req, res) => {
+    dataAccess.getSlidesByID(req.params.id, (resultS)=>{
+        var slides = resultS;
+
+        res.render('portfolio', {slides : slides})
+    })
 })
 
 router.get('/privacy', (req, res) => {
