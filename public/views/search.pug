@@ -9,8 +9,26 @@ prepend scripts
 block content
     //-CONTENT-STARTS-HERE-//
     section#search
-        h1.title Enter your suburb below and discover your areas brave history:
+        h1.title Enter your suburb below and discover your area's brave history:
         form(action="/search", method="get")
             input#search-box(type="search", name="term", placeholder="i.e. 3122", onblur="placeholder='i.e. 3122'", onfocus="placeholder=''")
             input#search-btn(type="submit", value="search")
-            
+    section#results
+        if listings.length!==0  
+            table
+                thead
+                    th Regimental Number
+                    th Name
+                    th Address
+                    th Battalion
+                each result in listings
+                    tr
+                        td.regNumber= result.regimentNum
+                        td.name
+                            a(href= result.href)
+                                p= result.name
+                        td.address= result.address
+                        td.battalion= result.battalion
+
+   
+    

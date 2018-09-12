@@ -22,3 +22,15 @@ input[type="search"]{
 #search-btn{
     width: 14%;
 }
+table{
+    border-spacing: 0.5em;
+}
+thead{
+    text-align: center
+}
+.regNumber{
+    text-align: right;
+}
+.name{
+    text-align: left;
+}
