@@ -36,8 +36,6 @@ router.get('/portfolio', (req, res) => {
 router.get('/privacy', (req, res) => {
     res.render('privacy')
 })
-    res.render('portfolio')
-})
 
 router.get('/search', (req, res) => {
 
