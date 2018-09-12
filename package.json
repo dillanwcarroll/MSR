@@ -14,8 +14,7 @@
     "express": "^4.16.3",
     "gulp": "^3.9.1",
     "pug": "^2.0.3",
-    "tedious": "^2.6.4"
-    "pug": "^2.0.3",
+    "tedious": "^2.6.4",
     "request": "^2.88.0"
   },
   "devDependencies": {}
