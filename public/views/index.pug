@@ -9,9 +9,9 @@ prepend scripts
 
 block content
     section#search
-        h1.title Enter your suburb below and discover your areas brave history:
+        h1.title Profile Search:
         form(action="/search", method="get")
-            input#search-box(type="search", name="term", placeholder="i.e. 3122", onblur="placeholder='i.e. 3122'", onfocus="placeholder=''")
+            input#search-box(type="search", name="place")
             input#search-btn(type="submit", value="search")
     section#links
         a.card(href="https://www.aif.adfa.edu.au/index.html", target="_blank")

@@ -1,7 +1,7 @@
 extends layout.pug
 
 prepend styles
-    link(rel="stylesheet", href="/styles/search.css")
+    link(rel="stylesheet", href="/styles/advancedSearch.css")
 
 prepend scripts
     //-script(src="/scripts/FILENAME.js")
@@ -9,9 +9,25 @@ prepend scripts
 block content
     //-CONTENT-STARTS-HERE-//
     section#search
-        h1.title Enter your suburb below and discover your area's brave history:
+        h1.title Advanced Search:
         form(action="/search", method="get")
-            input#search-box(type="search", name="term", placeholder="i.e. 3122", onblur="placeholder='i.e. 3122'", onfocus="placeholder=''")
+            div#params
+                .param
+                    label(for="name")
+                        h3 Name
+                    input#name(type="search", name="name", value=params.name)
+                .param
+                    label(for="place") 
+                        h3 Place
+                    input#place(type="search", name="place", value=params.place)
+                .param
+                    label(for="regNum") 
+                        h3 Regimental Number
+                    input#regNum(type="search", name="regNum", value=params.regNum)
+                .param
+                    label(for="battalion") 
+                        h3 Battalion
+                    input#battalion(type="search", name="battalion", value=params.battalion)
             input#search-btn(type="submit", value="search")
     section#results
         if listings.length!==0  
@@ -23,11 +39,11 @@ block content
                     th Battalion
                 each result in listings
                     tr
-                        td.regNumber= result.regimentNum
+                        td.regNumber= result.regNum
                         td.name
                             a(href= result.href)
                                 p= result.name
-                        td.address= result.address
+                        td.address= result.place
                         td.battalion= result.battalion
 
    

@@ -1,0 +1,32 @@
+form{
+    width: 100%;
+}
+#params{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.param{
+    width: 24%;
+}
+.param input{
+    display: block;
+    font-size: 24px;
+    width: 100%;
+    text-align: left;
+}
+.param label *{
+    margin: 0;
+    padding-left: 2.5%;
+}
+#search-btn{
+    display: block;
+    width: 200px;
+    margin: 10px auto 0 auto;
+}
+table{
+    border-spacing: 0.5em;
+}
+thead{
+    text-align: center
+}

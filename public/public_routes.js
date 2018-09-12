@@ -38,11 +38,14 @@ router.get('/privacy', (req, res) => {
 })
 
 router.get('/search', (req, res) => {
-
     const search = require(__dirname + '/aif-search')
-
-    var listings = search.search(req.query.term, (err,listings)=>{
-        console.log(listings)
-        res.render('search', {listings : listings})
+    var params = {
+        name: req.query.name || '',
+        place: req.query.place || '',
+        regNum: req.query.regNum || '',
+        battalion: req.query.battalion || ''
+    }
+    var listings = search.search(params, (err, listings) => {
+        res.render('search', { listings: listings, params: params })
     })
 })

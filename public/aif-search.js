@@ -1,11 +1,11 @@
 const request = require('request')
 const cheerio = require('cheerio')
 const CircularJSON = require('circular-json')
-const baseAddress = 'https://www.aif.adfa.edu.au'
+const baseplace = 'https://www.aif.adfa.edu.au'
 
-let search = function(term, callback) {
-    var url = baseAddress+'/search?type=search&name=&regNum=&place='+term
-    console.log('searching AIF for: ' + term + ' @ ' + url)
+let search = function(params, callback) {
+    var url = baseplace+`/search?type=search&name=${params.name}&regNum=${params.regNum}&place=${params.place}&townOnly=y`
+    console.log('searching AIF for: ' + params + ' @ ' + url)
     var listings = []
     request(url, (err, res, body) => {
         if(err){
@@ -15,34 +15,35 @@ let search = function(term, callback) {
             $('tr').each((index, element) => {
                 if ($('tr').length-1 != index) {
 
-                    var regimentNum = element.childNodes[1].firstChild
+                    var regNum = element.childNodes[1].firstChild
                     var name = element.childNodes[2].firstChild
-                    var address = element.childNodes[3].firstChild
+                    var place = element.childNodes[3].firstChild
                     var battalion = element.childNodes[4].firstChild
                     var href = ''
 
-                    if (regimentNum !== null) regimentNum = regimentNum
+                    if (regNum !== null) regNum = regNum
                     if (name !== null) name = name
-                    if (address !== null) address = address
+                    if (place !== null) place = place
                     if (battalion !== null) battalion = battalion.firstChild
 
-                    if (regimentNum !== null) regimentNum = regimentNum.data
+                    if (regNum !== null) regNum = regNum.data
                     if (name !== null) {
-                        href = baseAddress + name.attribs.href
+                        href = baseplace + name.attribs.href
                         name = name.firstChild.data
                     }
-                    if (address !== null) address = address.data
+                    if (place !== null) place = place.data
                     if (battalion !== null) battalion = battalion.data                
                     
                     listings.push({
-                        regimentNum : regimentNum,
+                        regNum : regNum,
                         name : name,
-                        address : address,
+                        place : place,
                         battalion : battalion,
                         href: href
                     })
                 }
             })
+            console.log(listings)
             return callback(null, listings)
         }
     })
