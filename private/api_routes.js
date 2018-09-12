@@ -6,6 +6,6 @@ module.exports = router
 router.get('/', (req, res) => {
     console.log('api test')
     dataAccess.test((result)=>{
-        res.send('<h1>'+JSON.stringify(result)+'</h1>')
+        res.send('<h1>'+result[0]+'</h1>')
     })
 })

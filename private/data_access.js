@@ -1,11 +1,11 @@
 const Connection = require('tedious').Connection;
 
 var config = {
-    userName: 'thaAIDSTAR',
-    password: 'Password1_',
-    server: 'aidansserver.database.windows.net',
+    userName: 'MsrUser',
+    password: 'MsrPass1',
+    server: 'msrsql.database.windows.net',
     // If you are on Microsoft Azure, you need this:
-    options: { encrypt: true, database: 'ChallengeData', useColumnNames: true, rowCollectionOnDone: true }
+    options: { encrypt: true, database: 'MsrDatabase', useColumnNames: true, rowCollectionOnDone: true }
 };
 var connection = new Connection(config);
 connection.on('connect', function (err) {
@@ -16,7 +16,7 @@ connection.on('connect', function (err) {
 var Request = require('tedious').Request;
 
 let test = (callback) => {
-    request = new Request("SELECT * FROM Client", function (err, rowCount, rows) {
+    request = new Request("SELECT * FROM Portfolio", function (err, rowCount, rows) {
         if (err) {
             console.log(err)
         }
