@@ -6,7 +6,7 @@ app.set('view engine', 'pug')
 app.set('views', __dirname + '\\public\\views')
 
 //Connect route files
-const apiRoutes = require(__dirname + '\\api\\api_routes')
+const apiRoutes = require(__dirname + '\\private\\api_routes')
 const publicRoutes = require(__dirname + '\\public\\public_routes')
 
 //Use route files

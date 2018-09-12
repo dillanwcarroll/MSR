@@ -152,3 +152,10 @@
     background-color:#E7B56B;
     transition: background-color .3s;
 }
+
+iframe{
+    width: 80%;
+    height: 100%;
+    left: 20%;
+    padding-top: 0%;
+}
