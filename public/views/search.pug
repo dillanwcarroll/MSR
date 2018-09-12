@@ -30,7 +30,9 @@ block content
                     input#battalion(type="search", name="battalion", value=params.battalion)
             input#search-btn(type="submit", value="search")
     section#results
-        if listings.length!==0  
+        if listings.length==0
+            h2(style="text-align: center") No Results Found
+        else  
             table
                 thead
                     th Regimental Number
