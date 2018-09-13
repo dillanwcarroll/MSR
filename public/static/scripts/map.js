@@ -4,7 +4,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidHJpZ2VucGFuaW5pIiwiYSI6ImNqbDV0NXU3NjJxZTAzc
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/trigenpanini/cjl5yll0308l82qqktmirrjcy',
-    center: mapCoords[0],
+    center: JSON.parse(slides[0].LocationCords),
     zoom: 3.0
 });
 
@@ -17,7 +17,7 @@ var geojson = {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": mapCoords[0]
+                "coordinates": JSON.parse(slides[0].LocationCords)
             }
         }
     ]
