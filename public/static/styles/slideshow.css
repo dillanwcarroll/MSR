@@ -11,7 +11,7 @@
     height:100%;
     background-size: cover;
 }
-.slideshow input{
+.slideshow .slide-minus, .slideshow .slide-plus{
     height: 100%;
     width: 10%;
     border: none;
