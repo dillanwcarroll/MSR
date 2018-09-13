@@ -7,6 +7,12 @@ append styles
     //-link(rel="stylesheet", href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css')
 prepend scripts
     //-script(src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js')
+    -
+        var years = []
+        slides.forEach(slide => {
+            years.push(slide.Year)
+        });
+    script!= "const slides = " + JSON.stringify(slides)
     script(src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js')
     script(src='/scripts/slideshow.js')
     script(src="/scripts/portfolio.js")
@@ -50,3 +56,5 @@ block content
             .slide
                 iframe(src="https://www.youtube.com/embed/Ir7J0eEuWgk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
             
+
+
