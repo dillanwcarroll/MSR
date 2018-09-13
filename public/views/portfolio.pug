@@ -15,16 +15,6 @@ prepend scripts
     script(src="/scripts/map.js")
 
 block content
-    header#titleBar
-        ul.nav.box-shadow
-                li
-                    h1#vetName Dude McGuy
-                a.nav-item(href="/")
-                    p.nav-content Roll of Honour
-                a.nav-item(href="")
-                    p.nav-content AIF Profile
-                a.nav-item(href="") 
-                    p.nav-content Newspaper Obituary
     section#mapSide(onload="")
         div#map
 
@@ -36,6 +26,16 @@ block content
             input#slider(name="timeline" type="range" min="1" max="16" value="1" onchange="updateTextInput(this.value - 1, this.max);")
 
     section#infoSide
+        header#titleBar
+            ul.nav.box-shadow
+                li
+                    h1#vetName Dude McGuy
+                a.nav-item(href="/")
+                    p.nav-content Roll of Honour
+                a.nav-item(href="")
+                    p.nav-content AIF Profile
+                a.nav-item(href="") 
+                    p.nav-content Newspaper Obituary
         div#basicInfo
             div#img
                 img.box-shadow(src="/assets/aboutimage1.png")
