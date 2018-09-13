@@ -17,13 +17,17 @@ html
                     p.nav-content ABOUT
                 a.nav-item(href="/search") 
                     p.nav-content SEARCH
-                a.nav-item(href="/")
-                    p.nav-content EDUCATION
-                    
+                div.dropdown
+                    button(class="dropbtn") EDUCATION
+                        div(class="dropdown-content")
+                            a(href="/login") Student
+                            a(href="/") Teacher                  
                 a.nav-item(href="/contact")
                     p.nav-content CONTACT
                 a.nav-item(href="/portfolio")
                     p.nav-content PORTFOLIO
+                
+
         content
             .container
                 block content
