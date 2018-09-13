@@ -4,9 +4,9 @@ var mapFootnoteText = document.getElementById("mapFootnote");
 
 slider.max = slides.length;
 yearText.innerHTML = slides[0].Year;
-mapFootnoteText.innerHTML = slides[0].Description;
+mapFootnoteText.innerHTML = slides[0].LocationName;
 
-//EXAMPLE ON CHANGE EVENT
+//react to slideshow index
 indexTracker = document.getElementsByClassName('indexTracker')[0]
 indexTracker.addEventListener('change', (event)=>{
     var tracker = event.srcElement
@@ -19,7 +19,7 @@ indexTracker.addEventListener('change', (event)=>{
 // Update the current slider value (each time you drag the slider handle)
 function updateTextInput(val, max) {
     yearText.innerHTML = slides[val].Year;
-    mapFootnoteText.innerHTML = slides[val].Description;
+    mapFootnoteText.innerHTML = slides[val].LocationName;
     yearText.style.marginLeft = 7.6 + ((76.8/(max -1)) * val) + "%";
     
         map.flyTo({
@@ -27,6 +27,12 @@ function updateTextInput(val, max) {
         });
         geojson.features[0].geometry.coordinates = JSON.parse(slides[val].LocationCords)
         map.getSource('point').setData(geojson)
+    
+    if (parseInt(indexTracker.value) != val) {
+        slideshow.indexTracker.setAttribute('value', val)
+        var event = new Event('change');
+        indexTracker.dispatchEvent(event);
+    }
     
     /*
         map.flyTo({
