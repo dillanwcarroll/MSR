@@ -3,23 +3,19 @@ form{
     margin-top: 1.5em;
 }
 #params{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
+    position: relative;
 }
 .param{
-    width: 24%;
+    display: inline-block;
 }
 .param input{
-    display: block;
-    font-size: 24px;
-    width: 100%;
+    width: calc(100% - 10px);
+    margin: 0 auto;
+    height: 2.2em;
+    font-size: 16px;
     text-align: left;
-    
-}
-.param label *{
-    margin: 0;
-    padding-left: 2.5%;
+    padding: 0 5px; 
 }
 #search-btn{
     display: block;
@@ -38,7 +34,7 @@ thead{
     text-align: center;
 }
 th{
-    text-align: left;
+    text-align: left;  
 }
 .regNumber{
     width: 15%;

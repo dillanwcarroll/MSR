@@ -15,19 +15,19 @@ block content
                 .param.regNumber
                     label(for="regNum") 
                         h3 Regimental Number
-                    input#regNum(type="search", name="regNum", value=params.regNum)
+                    input(type="search", name="regNum", value=params.regNum)
                 .param.name
                     label(for="name")
                         h3 Name
-                    input#name(type="search", name="name", value=params.name)
-                .param.place
+                    input(type="search", name="name", value=params.name)
+                .param.address
                     label(for="place") 
                         h3 Address
-                    input#place(type="search", name="place", value=params.place)
+                    input.place(type="search", name="place", value=params.place)
                 .param.battalion
                     label(for="battalion") 
                         h3 Battalion
-                    input#battalion(type="search", name="battalion", value=params.battalion)
+                    input(type="search", name="battalion", value=params.battalion)
             input#search-btn(type="submit", value="search")
     section
         h2 MSR Portfolio Results:
