@@ -9,42 +9,61 @@ prepend scripts
 block content
     //-CONTENT-STARTS-HERE-//
     section#search
-        h1.title Advanced Search:
+        h1.title Advanced Search
         form(action="/search", method="get")
             div#params
+                .param
+                    label(for="regNum") 
+                        h3 Regimental Number
+                    input#regNum(type="search", name="regNum", value=params.regNum)
                 .param
                     label(for="name")
                         h3 Name
                     input#name(type="search", name="name", value=params.name)
                 .param
                     label(for="place") 
-                        h3 Place
+                        h3 Address
                     input#place(type="search", name="place", value=params.place)
-                .param
-                    label(for="regNum") 
-                        h3 Regimental Number
-                    input#regNum(type="search", name="regNum", value=params.regNum)
                 .param
                     label(for="battalion") 
                         h3 Battalion
                     input#battalion(type="search", name="battalion", value=params.battalion)
             input#search-btn(type="submit", value="search")
-    section#results
-        if listings.length==0
+    section
+        h2 MSR Profile Results:
+        if profileResults.length==0
             h2(style="text-align: center") No Results Found
-        else  
+        else
             table
                 thead
-                    th Regimental Number
-                    th Name
-                    th Address
-                    th Battalion
-                each result in listings
+                    th.regNumber Regimental Number
+                    th.name Name
+                    th.address Address
+                    th.battalion Battalion
+                each result in profileResults
+                    tr
+                        td.regNumber= result.Regiment
+                        td.name
+                            -var href = '/portfolio/' + result.PortfolioID
+                            a(href= href)= result.Name
+                        td.address= result.Address
+                        td.battalion= result.Battalion
+    section
+        h2 AIF Search Results:
+        if aifResults.length==0
+            h2(style="text-align: center") No Results Found
+        else
+            table
+                thead
+                    th.regNumber Regimental Number
+                    th.name Name
+                    th.address Address
+                    th.battalion Battalion
+                each result in aifResults
                     tr
                         td.regNumber= result.regNum
                         td.name
-                            a(href= result.href)
-                                p= result.name
+                            a(href= result.href)= result.name
                         td.address= result.place
                         td.battalion= result.battalion
 

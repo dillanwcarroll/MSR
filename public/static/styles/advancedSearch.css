@@ -1,5 +1,6 @@
 form{
     width: 100%;
+    margin-top: 1.5em;
 }
 #params{
     display: flex;
@@ -24,9 +25,36 @@ form{
     width: 200px;
     margin: 10px auto 0 auto;
 }
+h2{
+    margin: 15px 0;
+}
 table{
-    border-spacing: 0.5em;
+    width: 100%;
+    border-spacing: 1em .5em;
+    font-size: 16px;
 }
 thead{
-    text-align: center
+    text-align: center;
+}
+.regNumber{
+    width: 15%;
+}
+.name{
+    width: 25%;
+}
+.address{
+    width: 30%;
+}
+.battalion{
+    width: 30%;
+}
+td.regNumber{
+    text-align: right;
+    padding-right: 1em; 
+}
+td a{
+    color: #1a0dab;
+}
+td:hover a{
+    text-decoration: underline;
 }
