@@ -65,14 +65,17 @@ let getMediaByID = (id, callback) => {
 };
 
 let profileSearch = (params, callback) => {
-    //console.log('params: ' + JSON.stringify(params))
-    var query = 'SELECT PortfolioID,Name,Address,Regiment,Battalion FROM Portfolio WHERE 1=1'
+    if ((params.name+params.place+params.regNum+params.battalion).trim() == '') {
+        callback([])
+    } else {
+        var query = 'SELECT PortfolioID,Name,Address,Regiment,Battalion FROM Portfolio WHERE 1=1'
         query += params.name != "" ? ` AND UPPER(Name) LIKE '%${params.name.toUpperCase()}%'` : ''
         query += params.place != "" ? ` AND UPPER(Address) LIKE '%${params.place.toUpperCase()}%'` : ''
         query += params.regNum != "" ? ` AND UPPER(Regiment) LIKE '${params.regNum.toUpperCase()}'` : ''
         query += params.battalion != "" ? ` AND UPPER(Battalion) LIKE '%${params.battalion.toUpperCase()}%'` : ''
-    //console.log('QUERY: "' + query + '"')
-    DatabaseRequest(query, callback)
+        //console.log('QUERY: "' + query + '"')
+        DatabaseRequest(query, callback)
+    }
 }
 
 module.exports = {

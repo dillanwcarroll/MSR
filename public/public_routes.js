@@ -51,16 +51,6 @@ router.get('/search', (req, res) => {
         battalion: req.query.battalion || ''
     }
 
-    dataAccess.profileSearch(params, (results)=>{completeQuery({profileResult: results})})
-
-    search.search(params, (err, listings) => {
-        if (err) {
-            consoel.log(err)
-        }else{
-            completeQuery({aifResult: listings})
-        }
-    })
-
     var aifResult
     var profileResult
     let completeQuery = (result) =>{
@@ -71,4 +61,12 @@ router.get('/search', (req, res) => {
             res.render('search', {params: params, aifResults: aifResult, profileResults: profileResult })
         }
     }
+    dataAccess.profileSearch(params, (results)=>{completeQuery({profileResult: results})})
+    search.search(params, (err, listings) => {
+        if (err) {
+            consoel.log(err)
+        }else{
+            completeQuery({aifResult: listings})
+        }
+    })
 })
