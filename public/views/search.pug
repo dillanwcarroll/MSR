@@ -1,6 +1,6 @@
 extends layout.pug
 
-prepend styles
+append styles
     link(rel="stylesheet", href="/styles/advancedSearch.css")
 
 prepend scripts
@@ -12,26 +12,26 @@ block content
         h1.title Advanced Search
         form(action="/search", method="get")
             div#params
-                .param
+                .param.regNumber
                     label(for="regNum") 
                         h3 Regimental Number
-                    input#regNum(type="search", name="regNum", value=params.regNum)
-                .param
+                    input(type="search", name="regNum", value=params.regNum)
+                .param.name
                     label(for="name")
                         h3 Name
-                    input#name(type="search", name="name", value=params.name)
-                .param
+                    input(type="search", name="name", value=params.name)
+                .param.address
                     label(for="place") 
                         h3 Address
-                    input#place(type="search", name="place", value=params.place)
-                .param
+                    input.place(type="search", name="place", value=params.place)
+                .param.battalion
                     label(for="battalion") 
                         h3 Battalion
-                    input#battalion(type="search", name="battalion", value=params.battalion)
+                    input(type="search", name="battalion", value=params.battalion)
             input#search-btn(type="submit", value="search")
     section
-        h2 MSR Profile Results:
-        if profileResults.length==0
+        h2 MSR Portfolio Results:
+        if portfolioResults.length==0
             h2(style="text-align: center") No Results Found
         else
             table
@@ -40,7 +40,7 @@ block content
                     th.name Name
                     th.address Address
                     th.battalion Battalion
-                each result in profileResults
+                each result in portfolioResults
                     tr
                         td.regNumber= result.Regiment
                         td.name
