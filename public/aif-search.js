@@ -5,7 +5,7 @@ const baseplace = 'https://www.aif.adfa.edu.au'
 
 let search = function(params, callback) {
     var url = baseplace+`/search?type=search&name=${params.name}&regNum=${params.regNum}&place=${params.place}&townOnly=y`
-    console.log('searching AIF for: ' + params + ' @ ' + url)
+    console.log('searching AIF for: ' + JSON.stringify(params) + ' @ ' + url)
     var listings = []
     request(url, (err, res, body) => {
         if(err){
@@ -43,7 +43,7 @@ let search = function(params, callback) {
                     })
                 }
             })
-            console.log(listings)
+            //console.log(listings)
             return callback(null, listings)
         }
     })

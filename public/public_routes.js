@@ -50,7 +50,25 @@ router.get('/search', (req, res) => {
         regNum: req.query.regNum || '',
         battalion: req.query.battalion || ''
     }
-    var listings = search.search(params, (err, listings) => {
-        res.render('search', { listings: listings, params: params })
+
+    dataAccess.profileSearch(params, (results)=>{completeQuery({profileResult: results})})
+
+    search.search(params, (err, listings) => {
+        if (err) {
+            consoel.log(err)
+        }else{
+            completeQuery({aifResult: listings})
+        }
     })
+
+    var aifResult
+    var profileResult
+    let completeQuery = (result) =>{
+        if (result.profileResult != undefined) profileResult = result.profileResult
+        if (result.aifResult != undefined) aifResult = result.aifResult
+        if (profileResult != undefined && aifResult != undefined) {
+            console.log(profileResult)
+            res.render('search', {params: params, aifResults: aifResult, profileResults: profileResult })
+        }
+    }
 })
