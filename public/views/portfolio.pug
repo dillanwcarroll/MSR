@@ -15,33 +15,21 @@ prepend scripts
     script(src="/scripts/map.js")
 
 block content
-    section#mapSide(onload="")
-        div#map
-
-        div#timeline
-            h3#mapFootnote Sample Text
-
-            div#text
-                h3#textBox(name="text" type="text" value="")
-            input#slider(name="timeline" type="range" min="1" max="16" value="1" onchange="updateTextInput(this.value - 1, this.max);")
-
-    section#infoSide
+    section#mapSide.box-shadow(onload="")
         header#titleBar
             ul.nav.box-shadow
                 li
                     h1#vetName= portfolio.Name 
                 /// Try to add next sprint
-                //a.nav-item(href="/")
+                a.nav-item(href="/")
                     p.nav-content Roll of Honour
-                //a.nav-item(href="")
+                a.nav-item(href="")
                     p.nav-content AIF Profile
-                //a.nav-item(href="") 
+                a.nav-item(href="") 
                     p.nav-content Newspaper Obituary
-                    
-        div#basicInfo
-            div#imageDiv
-                img.box-shadow(src=portfolio.ProfilePic)
 
+        div#portfolioComponent.box-shadow
+            img#profileImage.box-shadow(src=portfolio.ProfilePic)
             #information
                 h4= "Date of Birth: "
                 h4#data= portfolio.DOB.getDate() + "-" + (portfolio.DOB.getMonth() + 1) + "-" + portfolio.DOB.getFullYear()
@@ -51,15 +39,25 @@ block content
                 h4#data= portfolio.DOD.getDate() + "-" + (portfolio.DOD.getMonth() + 1) + "-" + portfolio.DOD.getFullYear()
                 h4= "Regiment: "
                 h4#data= portfolio.Regiment
-                h4= "Battalion"
+                h4= "Battalion: "
                 h4#data= portfolio.Battalion
 
+        div#mapComponent.box-shadow
+            div#map.box-shadow
 
-        .slideshow
+            div#timeline
+                h3#mapFootnote Sample Text
+
+                div#text
+                    h3#textBox(name="text" type="text" value="")
+                input#slider(name="timeline" type="range" min="1" max="16" value="1" onchange="updateTextInput(this.value - 1, this.max);")
+
+    section#slidesSide.box-shadow
+        .slideshow.box-shadow
             input.slide-plus(type="button", value=">")
             input.slide-minus(type="button", value="<")
             each slide in slides
-                .slide
+                .slide.box-shadow
                     h1= slide.Title
                     
                     if slide.MediaTypeID == 1
@@ -67,7 +65,7 @@ block content
                         img(src=slide.Source)
                     else if slide.MediaTypeID == 2
                         p= slide.Description
-                        iframe#video(src=slide.Source type="text/html" frameborder="0")
+                        iframe#video(src=slide.Source type="text/html" frameborder="0" allowfullscreen)
                     else if slide.MediaTypeID == 3
                         p= slide.Description
                         p= 'SOUND GO HERE'

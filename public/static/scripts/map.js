@@ -52,7 +52,7 @@ map.on('load', function () {
         "type": "circle",
         "source": "point",
         "paint": {
-            "circle-radius": 10,
+            "circle-radius": 7,
             "circle-color": "#e24422"
         }
     });
