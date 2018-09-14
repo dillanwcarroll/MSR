@@ -1,0 +1,29 @@
+extends layout.pug
+
+append styles
+    link(rel="stylesheet", href="/styles/advancedSearch.css")
+
+prepend scripts
+    //-script(src="/scripts/FILENAME.js")
+
+block content
+    //-CONTENT-STARTS-HERE-//
+    section
+        h2 MSR Profile Results:
+        if portfolios.length==0
+            h2(style="text-align: center") No Results Found
+        else
+            table
+                thead
+                    th.regNumber Regimental Number
+                    th.name Name
+                    th.address Address
+                    th.battalion Battalion
+                each result in portfolios
+                    tr
+                        td.regNumber= result.Regiment
+                        td.name
+                            -var href = '/portfolio/' + result.PortfolioID
+                            a(href= href)= result.Name
+                        td.address= result.Address
+                        td.battalion= result.Battalion

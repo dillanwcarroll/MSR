@@ -30,6 +30,12 @@ router.get('/slideshow', (req, res) => {
     res.render('slideshow')
 })
 
+router.get('/portfolio', (req,res)=>{
+    dataAccess.getAllPortfolios((results)=>{
+        res.render('allPortfolios', {portfolios: results})
+    })
+})
+
 router.get('/portfolio/:id', (req, res) => {
     dataAccess.getSlidesByID(req.params.id, (resultS)=>{
         var slides = resultS;
@@ -52,15 +58,15 @@ router.get('/search', (req, res) => {
     }
 
     var aifResult
-    var profileResult
+    var portfolioResult
     let completeQuery = (result) =>{
-        if (result.profileResult != undefined) profileResult = result.profileResult
+        if (result.portfolioResult != undefined) portfolioResult = result.portfolioResult
         if (result.aifResult != undefined) aifResult = result.aifResult
-        if (profileResult != undefined && aifResult != undefined) {
-            res.render('search', {params: params, aifResults: aifResult, profileResults: profileResult })
+        if (portfolioResult != undefined && aifResult != undefined) {
+            res.render('search', {params: params, aifResults: aifResult, portfolioResults: portfolioResult })
         }
     }
-    dataAccess.profileSearch(params, (results)=>{completeQuery({profileResult: results})})
+    dataAccess.portfolioSearch(params, (results)=>{completeQuery({portfolioResult: results})})
     search.search(params, (err, listings) => {
         if (err) {
             consoel.log(err)

@@ -15,6 +15,7 @@ form{
     font-size: 24px;
     width: 100%;
     text-align: left;
+    
 }
 .param label *{
     margin: 0;
@@ -35,6 +36,9 @@ table{
 }
 thead{
     text-align: center;
+}
+th{
+    text-align: left;
 }
 .regNumber{
     width: 15%;

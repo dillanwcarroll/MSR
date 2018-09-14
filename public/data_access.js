@@ -64,7 +64,11 @@ let getMediaByID = (id, callback) => {
     DatabaseRequest("SELECT * FROM Media WHERE MediaID = '" + id + "'", callback)
 };
 
-let profileSearch = (params, callback) => {
+let getAllPortfolios = (callback) =>{
+    DatabaseRequest('SELECT PortfolioID,Name,Address,Regiment,Battalion FROM Portfolio', callback)
+}
+
+let portfolioSearch = (params, callback) => {
     if ((params.name+params.place+params.regNum+params.battalion).trim() == '') {
         callback([])
     } else {
@@ -82,5 +86,6 @@ module.exports = {
     getPortfolioByID: getPortfolioByID,
     getSlidesByID: getSlidesByID,
     getMediaByID: getMediaByID,
-    profileSearch: profileSearch
+    getAllPortfolios: getAllPortfolios,
+    portfolioSearch: portfolioSearch
 }
