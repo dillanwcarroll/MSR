@@ -6,7 +6,7 @@ var config = {
     password: 'Password1_',
     server: 'aidansserver.database.windows.net',
     // If you are on Microsoft Azure, you need this:
-    options: { encrypt: true, database: 'msr-data', useColumnNames: true, rowCollectionOnDone: true }
+    options: { encrypt: true, database: 'msr-data', useColumnNames: true, rowCollectionOnDone: true, dateformat: 'd/m/y' }
 };
 
 var connectToServer = function (request) {

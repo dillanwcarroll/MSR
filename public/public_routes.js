@@ -40,8 +40,10 @@ router.get('/portfolio/:id', (req, res) => {
 
         var portfolio
         var slides
+
         let completeQuery = (result) =>{
-            if(result.portfolio != null)portfolio = result.portfolio
+
+            if(result.portfolio != null)portfolio = result.portfolio[0]
             if(result.slides != null)slides = result.slides
             if (portfolio != null && slides != null) {
                 res.render('portfolio', {portfolio: portfolio, slides: slides})
