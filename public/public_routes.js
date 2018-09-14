@@ -57,7 +57,6 @@ router.get('/search', (req, res) => {
         if (result.profileResult != undefined) profileResult = result.profileResult
         if (result.aifResult != undefined) aifResult = result.aifResult
         if (profileResult != undefined && aifResult != undefined) {
-            console.log(profileResult)
             res.render('search', {params: params, aifResults: aifResult, profileResults: profileResult })
         }
     }
