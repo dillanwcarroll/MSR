@@ -10,6 +10,8 @@ let indexPlus = function(slideshow){
     } else {
         slideshow.index = 0;
     }
+    slideshow.indexTracker.setAttribute('value', slideshow.index)
+    slideshow.indexTracker.triggerChangeEvent()
     setSlideToIndex(slideshow)
 }
 let indexMinus = function(slideshow){
@@ -18,6 +20,8 @@ let indexMinus = function(slideshow){
     } else {
         slideshow.index = slideshow.slides.length-1;
     }
+    slideshow.indexTracker.setAttribute('value', slideshow.index)
+    slideshow.indexTracker.triggerChangeEvent()
     setSlideToIndex(slideshow)
 }
 //initialise slideshows
@@ -44,6 +48,23 @@ for (let i = 0; i < slideshows.length; i++) {
         minusButtons[i].addEventListener('click', (event) => {
             indexMinus(event.srcElement.slideshow)
         })
+    }
+    //initialise index tracker
+    slideshow.indexTracker = slideshow.getElementsByClassName('indexTracker')[0]
+    slideshow.indexTracker.setAttribute('value', slideshow.index)
+    slideshow.indexTracker.slideshow = slideshow
+    //EXAMPLE ON CHANGE EVENT
+    slideshow.indexTracker.addEventListener('change', (event)=>{
+        var tracker = event.srcElement
+        if (tracker.value >= 0 && tracker.value < tracker.slideshow.slides.length) {
+            tracker.slideshow.index = parseInt(tracker.value)
+            setSlideToIndex(tracker.slideshow)
+            console.log('changeEventTriggered: ' + tracker.value)
+        }
+    })
+    slideshow.indexTracker.triggerChangeEvent = () => {
+        var event = new Event('change');
+        slideshow.indexTracker.dispatchEvent(event);
     }
 }
 

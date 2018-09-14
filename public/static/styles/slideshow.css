@@ -1,7 +1,7 @@
 .slideshow{
     width: 800px;
-    height: 800px;
-    background-color: lightgrey;
+    height: 918px;
+    background-color: rgb(154, 217, 240);
     overflow: hidden;
 
     position: relative;
@@ -9,18 +9,28 @@
 .slideshow .slide{
     width:100%;
     height:100%;
-    background-size: cover;
+    
 }
-.slideshow input{
-    height: 100%;
-    width: 10%;
+
+.slide img{
+    border-radius: 15px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+}
+
+.slideshow .slide-minus, .slideshow .slide-plus{
+    height: 5%;
+    width: 30%;
     border: none;
     box-shadow: none;
     background-color: rgba(0, 0,0,0); 
     color: rgba(0, 0,0,0); 
     cursor: pointer;
-
     position: absolute;
+    bottom: 0;
+    z-index: 1;
 }
 .slideshow:hover input{
     background-color: rgba(0, 0,0,0.5);
@@ -37,3 +47,20 @@ iframe{
     width: 100%;
     height: 100%;
 }
+
+.indexTracker{
+    display: none;
+}
+
+.slide h1{
+    width: 100%;
+    margin-top: 0;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.slide p{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+

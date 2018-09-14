@@ -30,16 +30,25 @@ router.get('/slideshow', (req, res) => {
     res.render('slideshow')
 })
 
-router.get('/portfolio/:id', (req, res) => {
-    dataAccess.getSlidesByID(req.params.id, (resultS)=>{
-        var slides = resultS;
-
-        res.render('portfolio', {slides : slides})
-    })
-})
-
 router.get('/privacy', (req, res) => {
     res.render('privacy')
+})
+
+router.get('/portfolio/:id', (req, res) => {
+        dataAccess.getPortfolioByID(req.params.id, (result)=>{completeQuery({portfolio: result})})
+        dataAccess.getSlidesByID(req.params.id, (result)=>{completeQuery({slides: result})})
+
+        var portfolio
+        var slides
+
+        let completeQuery = (result) =>{
+
+            if(result.portfolio != null)portfolio = result.portfolio[0]
+            if(result.slides != null)slides = result.slides
+            if (portfolio != null && slides != null) {
+                res.render('portfolio', {portfolio: portfolio, slides: slides})
+            }
+        }
 })
 
 router.get('/search', (req, res) => {
