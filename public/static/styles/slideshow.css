@@ -1,20 +1,22 @@
 .slideshow{
     width: 800px;
     height: 918px;
-    background-color: rgb(154, 217, 240);
+    background-color: rgb(200, 200, 200);
     overflow: hidden;
 
     position: relative;
 }
 .slideshow .slide{
     width:100%;
-    height:100%;
+    height:auto;
     
 }
 
 .slide img{
     border-radius: 15px;
     max-width: 100%;
+    height: auto;
+    max-height: 100% ;
     margin-left: auto;
     margin-right: auto;
     bottom: 0;

@@ -13,6 +13,7 @@ prepend scripts
     script(src='/scripts/slideshow.js')
     script(src="/scripts/portfolio.js")
     script(src="/scripts/map.js")
+    script!= console.log(portfolio.DOB.getTime())
 
 block content
     section#mapSide.box-shadow(onload="")
@@ -21,26 +22,34 @@ block content
                 li
                     h1#vetName= portfolio.Name 
                 /// Try to add next sprint
-                a.nav-item(href="/")
-                    p.nav-content Roll of Honour
-                a.nav-item(href="")
-                    p.nav-content AIF Profile
-                a.nav-item(href="") 
-                    p.nav-content Newspaper Obituary
+                if portfolio.RollOfHonor != ""
+                    a.nav-item(href= portfolio.RollOfHonor)
+                        p.nav-content Roll of Honour
+                if portfolio.AifID > 0
+                    a.nav-item(href= "https://www.aif.adfa.edu.au/showPerson?pid=" + portfolio.AifID)
+                        p.nav-content AIF Profile
+                if portfolio.Obituary != ""
+                    a.nav-item(href= portfolio.Obituary) 
+                        p.nav-content Newspaper Obituary
 
         div#portfolioComponent.box-shadow
             img#profileImage.box-shadow(src=portfolio.ProfilePic)
             #information
-                h4= "Date of Birth: "
-                h4#data= portfolio.DOB.getDate() + "-" + (portfolio.DOB.getMonth() + 1) + "-" + portfolio.DOB.getFullYear()
-                h4= "Place of Birth: "
-                h4#data= portfolio.PlaceOB
-                h4= "Date of Death: "
-                h4#data= portfolio.DOD.getDate() + "-" + (portfolio.DOD.getMonth() + 1) + "-" + portfolio.DOD.getFullYear()
-                h4= "Regiment: "
-                h4#data= portfolio.Regiment
-                h4= "Battalion: "
-                h4#data= portfolio.Battalion
+                if portfolio.DOB.getTime() != -2208988800000
+                    h4= "Date of Birth: "
+                    h4#data= portfolio.DOB.getDate() + "-" + (portfolio.DOB.getMonth() + 1) + "-" + portfolio.DOB.getFullYear()
+                if portfolio.Address != ""
+                    h4= "Address: "
+                    h4#data= portfolio.Address
+                if portfolio.DOD.getTime() != -2208988800000
+                    h4= "Date of Death: "
+                    h4#data= portfolio.DOD.getDate() + "-" + (portfolio.DOD.getMonth() + 1) + "-" + portfolio.DOD.getFullYear()
+                if portfolio.Regiment != ""
+                    h4= "Regiment: "
+                    h4#data= portfolio.Regiment
+                if portfolio.Battalion != ""
+                    h4= "Battalion: "
+                    h4#data= portfolio.Battalion
 
         div#mapComponent.box-shadow
             div#map.box-shadow

@@ -13,6 +13,7 @@ indexTracker.addEventListener('change', (event)=>{
     if (tracker.value >= 0 && tracker.value < slides.length) {
         slider.value = parseInt(tracker.value)+1
         updateTextInput(parseInt(tracker.value),slides.length)
+        
     }
 })
 

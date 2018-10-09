@@ -159,6 +159,7 @@ input[type="submit"]:focus{
 
     width: calc(100% + 3em);
     background-color: #EDC881;
+    z-index: 11;
 }
 .dropdown-content a{
     margin: 0;
@@ -167,4 +168,5 @@ input[type="submit"]:focus{
     height:40px;
     display: block;
     line-height: 40px;
+    
 }
