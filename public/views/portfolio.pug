@@ -80,7 +80,7 @@ block content
                         iframe#video(src=slide.Source type="text/html" frameborder="0" allowfullscreen)
                     else if slide.MediaTypeID == 3
                         p= slide.Description
-                        p= 'SOUND GO HERE'
+                        a(href= slide.Source) PDF Link
                     else
                         p#slideText= slide.Description
             input.indexTracker(type="text")
