@@ -32,6 +32,7 @@ body{
     padding-bottom: 15px;
     width: 40%;
     height: 100%;
+
 }
 
 #map{
@@ -85,18 +86,18 @@ body{
 }
 
 #information h4{
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 3px;
     margin-bottom: 1px;
 }
 
 h4#data{
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 1px;
     margin-bottom: 3px;
     text-align: right;
-    /*padding-left: 20%;*/
-    width: 100%;
+    padding-right: 3%;
+    width: 97%;
 }
 
 #timeline{
@@ -230,7 +231,7 @@ input[type=range] {
 }
 
 #vetName{
-    font-size: 32px;
+    font-size: 1.6vw;
     float: left;
     margin-top: 4px;
     margin-bottom: 0;
@@ -270,4 +271,23 @@ input[type=range] {
     border-radius: 20px;
     top: 0;
     left: 0;
+}
+
+#information::-webkit-scrollbar-track
+{
+    border-radius: 15px;
+    background-color: #F5F5F5;
+}
+
+#information::-webkit-scrollbar
+{
+    border-radius: 10px;
+	width: 7px;
+	background-color: #F5F5F5;
+}
+
+#information::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #EDC881
 }

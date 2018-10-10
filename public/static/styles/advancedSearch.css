@@ -52,8 +52,14 @@ td.regNumber{
     text-align: right;
     padding-right: 1em; 
 }
+
+td{
+    padding-bottom: 10px;
+}
+
 td a{
     color: #1a0dab;
+    
 }
 td:hover a{
     text-decoration: underline;

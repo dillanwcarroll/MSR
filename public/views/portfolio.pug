@@ -44,6 +44,9 @@ block content
                 if portfolio.DOD.getTime() != -2208988800000
                     h4= "Date of Death: "
                     h4#data= portfolio.DOD.getDate() + "-" + (portfolio.DOD.getMonth() + 1) + "-" + portfolio.DOD.getFullYear()
+                if portfolio.Occupation != ""
+                    h4= "Occupation: "
+                    h4#data= portfolio.Occupation
                 if portfolio.Regiment != ""
                     h4= "Regiment: "
                     h4#data= portfolio.Regiment
