@@ -2,11 +2,11 @@ const Connection = require('tedious').Connection;
 var Request = require('tedious').Request;
 
 var config = {
-    userName: 'thaAIDSTAR',
-    password: 'Password1_',
-    server: 'aidansserver.database.windows.net',
+    userName: 'dillan',
+    password: 'D1llan$pass',
+    server: 'dillanzure.database.windows.net',
     // If you are on Microsoft Azure, you need this:
-    options: { encrypt: true, database: 'msr-data', useColumnNames: true, rowCollectionOnDone: true, dateformat: 'd/m/y' }
+    options: { encrypt: true, database: 'TeamCDatabase', useColumnNames: true, rowCollectionOnDone: true, dateformat: 'd/m/y' }
 };
 
 var connectToServer = function (request) {
