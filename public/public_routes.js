@@ -84,3 +84,7 @@ router.get('/search', (req, res) => {
         }
     })
 })
+
+router.get('/EditPortfolioTimelineSlider', (req, res) => {
+    res.render('EditPortfolioTimelineSlider')
+})
