@@ -15,3 +15,10 @@
     // e.lngLat is the longitude, latitude geographical position of the event
     JSON.stringify(e.lngLat);
   });
+
+  // <---- button script ---->           button(onclick='something()') Click
+  // var something = function() {
+  //   console.log('something')
+  // }
+
+  

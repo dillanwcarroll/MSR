@@ -1,0 +1,16 @@
+extends layout.pug
+
+prepend styles
+    link(rel="stylesheet", href="/styles/messageSent.css")
+
+prepend scripts
+    //-script(src="/scripts/FILENAME.js")
+
+
+block content
+    //-CONTENT-STARTS-HERE-//
+
+    section#message
+        h2 Portfolio saved, returning you to the front page
+        form(action="/")
+            input(type="submit" value="Return Home")

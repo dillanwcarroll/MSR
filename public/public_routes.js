@@ -22,6 +22,10 @@ router.get('/messageSent', (req, res) => {
     res.render('messageSent')
 })
 
+router.get('/portfolioSaved', (req, res) => {
+    res.render('portfolioSaved')
+})
+
 router.get('/login', (req, res) => {
     res.render('login')
 })

@@ -13,9 +13,32 @@ block content
     title Get coordinates of the mouse pointer
         meta(name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no')
     section
+    
+    
     div#map
     
+        div#yearslider
+            input#yearslider(name="editTimeline" type="range" min="1" max="16" value="1")
+    
         pre#info.
+            
+    div#addcontent
+        form(action="/portfolioSaved", method="get" onsubmit="this.submit(); this.reset(); return false;")
+            .form-group
+                input#button(type="submit", value="add content") 
+
+    h1
+        form(action="/portfolioSaved", method="get" onsubmit="this.submit(); this.reset(); return false;")
+            .form-group
+                textarea#eventDescription(cols="30", rows="2" name="eventDescription" placeholder="Description of Event")
+            .form-group
+                input#button(type="submit", value="save")
+
+      
+
+    
+
+     
 
 
 
