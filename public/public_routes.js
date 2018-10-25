@@ -26,6 +26,10 @@ router.get('/portfolioSaved', (req, res) => {
     res.render('portfolioSaved')
 })
 
+router.get('/addContent', (req, res) => {
+    res.render('addContent')
+})
+
 router.get('/login', (req, res) => {
     res.render('login')
 })
