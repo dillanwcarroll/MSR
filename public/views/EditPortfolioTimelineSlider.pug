@@ -16,16 +16,21 @@ block content
     
     
     div#map
-    
-        div#yearslider
-            input#yearslider(name="editTimeline" type="range" min="1" max="16" value="1")
-    
         pre#info.
-            
-    div#addcontent
+
+    #contentform
         form(action="/addContent", method="get" onsubmit="this.submit(); this.reset(); return false;")
+                .form-group
+                    input#button(type="submit", value="add content")
+        form(action="/EditPortfolioTimelineSlider", method="get" onsubmit="this.submit(); this.reset(); return false;")
             .form-group
-                input#button(type="submit", value="add content") 
+                input#button(type="submit", value="< prev slide")
+                input#button(type="submit", value="next slide >")
+                label(for="slideNo") Slide Number ## of ##
+                textarea#setCoordinates(cols="30", rows="2" name="setCoordinates" placeholder="Coordinates")
+
+    div#yearslider
+            input#yearslider(name="editTimeline" type="range" min="1" max="16" value="1")
 
     h1
         form(action="/portfolioSaved", method="get" onsubmit="this.submit(); this.reset(); return false;")
@@ -33,6 +38,10 @@ block content
                 textarea#eventDescription(cols="30", rows="2" name="eventDescription" placeholder="Description of Event")
             .form-group
                 input#button(type="submit", value="save")
+
+        
+                
+            
 
       
 

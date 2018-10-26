@@ -20,7 +20,7 @@ input{
     display: inline-block;
     font-family: 'Raleway', sans-serif;
     height: 46px;
-    width: 128px;
+    /* width: 128px; */
     font-size: 16px;
 
 }
