@@ -27,15 +27,16 @@ block content
                 input#button(type="submit", value="< prev slide")
                 input#button(type="submit", value="next slide >")
                 label(for="slideNo") Slide Number ## of ##
-                textarea#setCoordinates(cols="30", rows="2" name="setCoordinates" placeholder="Coordinates")
+                textarea#setCoordinates(cols="30", rows="2" name="setCoordinates" placeholder="Click on map to set Coordinates")
 
     div#yearslider
             input#yearslider(name="editTimeline" type="range" min="1" max="16" value="1")
+            label(for="editTimeline" type="timelineLabel") Year
 
     h1
         form(action="/portfolioSaved", method="get" onsubmit="this.submit(); this.reset(); return false;")
             .form-group
-                textarea#eventDescription(cols="30", rows="2" name="eventDescription" placeholder="Description of Event")
+                textarea#eventDescription(cols="30", rows="4" name="eventDescription" placeholder="Description of Event")
             .form-group
                 input#button(type="submit", value="save")
 

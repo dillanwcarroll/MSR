@@ -16,6 +16,12 @@ body{
 h1{
   position: relative;
   margin-right: 55%;
+  width: 20%;
+}
+
+#eventDescription{
+  width: 100%;
+  margin-left: 12%;
 }
 
 p{
@@ -33,7 +39,7 @@ p{
     display: block;
     height: 500px;
     margin-left: 50px;
-    margin-right: 650px;
+    margin-right: 750px;
 }
 
 #info {
@@ -54,8 +60,9 @@ p{
 /* maps end */
 /* range slider start */
 #yearslider{
-  width: 73%;
+  width: 72%;
   margin-left: 25px;
+  display: inline-flex;
 }
 
 input[type=range] {
@@ -143,6 +150,13 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
     background: #f6eb9d;
   }
+
+  label[type="timelineLabel"] {
+    color: white;
+    background-color: #000000;
+    margin-left: 50px;
+    font-size: 40px;
+  }
   
 /* range slider end */
 /* borrowed contact begin */
@@ -150,9 +164,6 @@ input[type=range] {
 section{
   display: inline-block;
   width: 100%;
-}
-form{
-  
 }
 
 input{
@@ -181,15 +192,14 @@ input[type="submit"]{
 #contentform{
   display: inline-block;
   position: absolute;
-  top: 346px;
+  top: 416px;
   right: 190px;
   width: 50%;
   height: 10px;
-  
 }
 
 #setCoordinates{
-  width: 40%;
-  margin-left: 374px;
+  width: 26%;
+  margin-left: 525px;
 }
 
