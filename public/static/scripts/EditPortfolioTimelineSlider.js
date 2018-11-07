@@ -16,20 +16,29 @@
     JSON.stringify(e.lngLat);
   });
 
+  map.on('click', function (e) { 
+    document.getElementById('setCoordinates').innerHTML =
+    JSON.stringify(e.point) +
+    JSON.stringify(e.lngLat);
+  });
+
   // define a lookup for what text should be displayed for each value in your range
   var $range = $(".js-range-slider");
   var $result = $(".js-result");
   
-  var values = [0, 100, 200, 300, 999];
-  var values_p = ["Slideshow 1", "1900", "1901", "1902", "1903"];
+  var rangeValues = [0, 100, 200, 300, 999];
+  var rangeValues_p = ["Slideshow 1", "1900", "1901", "1902", "1903"];
   
   $range.ionRangeSlider({
       type: "single",
+      min: 1850,
+      max: 2010,
+      step: 1,
       grid: true,
-      values: values,
+      values: rangeValues,
       prettify: function (n) {
-        var ind = values.indexOf(n);
-        return values_p[ind];
+        var ind = rangeValues.indexOf(n);
+        return rangeValues_p[ind];
       },
       onStart: function(data) {
       $result.text(data.from_value);
@@ -38,6 +47,9 @@
       $result.text(data.from_value);
       }
   });
+
+
+
 
   // <---- button script ---->           button(onclick='something()') Click
   // var something = function() {
