@@ -16,6 +16,29 @@
     JSON.stringify(e.lngLat);
   });
 
+  // define a lookup for what text should be displayed for each value in your range
+  var $range = $(".js-range-slider");
+  var $result = $(".js-result");
+  
+  var values = [0, 100, 200, 300, 999];
+  var values_p = ["Slideshow 1", "1900", "1901", "1902", "1903"];
+  
+  $range.ionRangeSlider({
+      type: "single",
+      grid: true,
+      values: values,
+      prettify: function (n) {
+        var ind = values.indexOf(n);
+        return values_p[ind];
+      },
+      onStart: function(data) {
+      $result.text(data.from_value);
+      },
+      onChange: function(data) {
+      $result.text(data.from_value);
+      }
+  });
+
   // <---- button script ---->           button(onclick='something()') Click
   // var something = function() {
   //   console.log('something')
