@@ -93,6 +93,6 @@ router.get('/search', (req, res) => {
     })
 })
 
-router.get('/EditPortfolioTimelineSlider', (req, res) => {
-    res.render('EditPortfolioTimelineSlider')
+router.get('/editSlideshow', (req, res) => {
+    res.render('editSlideshow')
 })
