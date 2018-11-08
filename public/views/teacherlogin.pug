@@ -1,7 +1,7 @@
 extends layout.pug
 
 append styles
-    link(rel="stylesheet", href="/styles/login.css")
+    link(rel="stylesheet", href="/styles/teacherlogin.css")
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
         crossorigin="anonymous")
@@ -16,7 +16,7 @@ block content
         section
             h1 Login Below
             form(method='', action='')   
-                label.labelE(style='font-weight:bold') Login Code
+                label.labelE(style='font-weight:bold') Email
                 //-email box below-//
                 input.email(type='email', name='email', placeholder='') 
                 
@@ -27,6 +27,4 @@ block content
                 i#btn-show-hide-pwd(class="fas fa-eye btn-show-hide-pwd", data-for="password")
                 //-login button-//
                 input.submit(type='submit', value='LOGIN', class='button', style='font-weight:bold')
-
-        
-        
+            h2.info Teacher use only!

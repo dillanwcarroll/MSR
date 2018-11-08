@@ -26,6 +26,11 @@ router.get('/login', (req, res) => {
     res.render('login')
 })
 
+router.get('/teacherlogin', (req, res) => {
+    res.render('teacherlogin')
+})
+
+
 router.get('/slideshow', (req, res) => {
     res.render('slideshow')
 })

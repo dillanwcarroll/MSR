@@ -75,7 +75,7 @@ header{
     padding: 0;
     margin: 0;
     text-align: center;
-    background-color: #EDC881;
+    background-color: slategray
 }
 .nav-item{
     display: inline-block;
