@@ -23,6 +23,8 @@ block content
     div#map
         pre#info.
     textarea#setCoordinates(cols="30", rows="2" name="setCoordinates" placeholder="Click on map to set Coordinates")
+    .js-result
+        
 
     #contentform
         form(action="/addContent", method="get" onsubmit="this.submit(); this.reset(); return false;")
@@ -38,12 +40,14 @@ block content
                 textarea#eventDescription(cols="30", rows="4" name="eventDescription" placeholder="Description of Event")
             .form-group
                 input#button(type="submit", value="save")
+            
+        
                 
 
     
     .range-slider
         input.js-range-slider(type='text', value='')
-    .extra-controls.js-result
+    .extra-controls
         | Placeholder for some buttons to change slider behavior
 
         
