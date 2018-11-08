@@ -1,0 +1,70 @@
+extends layout.pug
+
+prepend styles
+    link(rel="stylesheet", href="/styles/basicInfo.css")
+
+prepend scripts
+    script(src="/scripts/basicInfo.js")
+   
+      
+
+block content
+    //-CONTENT-STARTS-HERE-//
+    d.row
+            section
+                h1.title Basic Information:
+                form(method='POST', action='/addInfo')
+                    .form-group
+                        label(for='name') Name of solider:
+                        input#name(type='text', placeholder='First and Last Name' name='Name')
+                    .form-group
+                        label(for='DateOfBirth') Date of birth:
+                        input#DateOfBirth(type='date', placeholder='dd/mm/yyyy' name='DOB')
+                    .form-group
+                        label(for='DateOfDeath') Date of death:
+                        input#DateofDeath(type='date', placeholder='dd/mm/yyyy' name='DOD')
+                    .form-group
+                        label(for='RN') Regiment number:
+                        input#RN(type='int', placeholder='Regiment no' name='Regiment')
+                    .form-group
+                        label(for='occupation') Occupation before the war:
+                        input#occupation(type='text',placeholder='Occupation' name='Occupation')
+                    .form-group
+                        label(for='batallion') Batallion:
+                        input#batallion(type='text',placeholder='Batallion' name='Batallion')
+                    .form-group
+                        label(for='AIF link') AIF link:
+                        input#occupation(type='text',placeholder='AIF Link' name='AIF Link')
+                    .form-group
+                        label(for='Trove link') Trove link:
+                        input#occupation(type='text',placeholder='Trove Link' name='Trove Link')
+                    .form-group
+                        label(for='NAA link') NAA link:
+                        input#occupation(type='text',placeholder='NAA Link' name='NAA Link')
+                    .form-group
+                        label(for='AWM link') AWM link:
+                        input#occupation(type='text',placeholder='AWM Link' name='AWM Link')        
+                    
+                        input.btn.btn-primary(value='Save' type='submit')
+
+
+
+                        input.btn.btn-formButton(value='Add Field' type='submit')
+
+
+                        <form-1>
+                        <b>Title:</b> <input type="text" name="Title">
+                        <b> Descrition:</b><input type="text" name="Descrition">
+                         input.formBtn(value='Save' type='submit')
+                        </form1-1>
+
+                        
+                d.column
+                        
+                    section.img
+                        img.box-shadow(src="https://media.discordapp.net/attachments/366439736145084428/504819151450406912/Portrait_Placeholder.png?width=300&height=300")
+                        label(for='.img') Upload veteran picture if applicable
+                        form2(method='post', enctype='multipart/form-data')
+                            input.select(type='file', name='imageupload')
+                            input.btn.btn.upload(type='submit', name='Upload', value='Upload')
+                        

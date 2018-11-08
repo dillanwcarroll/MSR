@@ -53,6 +53,10 @@ router.get('/privacy', (req, res) => {
     res.render('privacy')
 })
 
+router.get("/basicInfo", (req, res) => {
+    res.render("basicInfo");
+  });
+
 router.get('/portfolio/:id', (req, res) => {
         dataAccess.getPortfolioByID(req.params.id, (result)=>{completeQuery({portfolio: result})})
         dataAccess.getSlidesByID(req.params.id, (result)=>{completeQuery({slides: result})})
