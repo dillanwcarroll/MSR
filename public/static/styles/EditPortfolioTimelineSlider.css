@@ -14,22 +14,11 @@ body{
     width: 100%;
 }
 
-h1{
-  position: relative;
-  margin-right: 55%;
-  width: 20%;
-}
-
 #eventDescription{
-  width: 100%;
-  margin-left: 12%;
+  width: 40%;
+  margin-left: 50%;
 }
 
-p{
-  width:25%;
-  display:inline-block;
-  margin:0px auto;
-}
 
 /* maps start */
 #map{ 
@@ -64,14 +53,14 @@ p{
 html {
   height: 100%;
 }
-
+/* 
 body {
   height: 100%;
   overflow: hidden;
   margin: 40px 40px;
   font-family: Arial, sans-serif;
   font-size: 12px;
-}
+} */
 
 .range-slider {
   position: relative;

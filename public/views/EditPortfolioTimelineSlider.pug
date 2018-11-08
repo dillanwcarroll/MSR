@@ -33,22 +33,20 @@ block content
                 input#button(type="submit", value="< prev slide")
                 input#button(type="submit", value="next slide >")
                 label(for="slideNo") Slide Number ## of ##
-                
-
-    <div class="range-slider">
-        <input type="text" class="js-range-slider" value="" />
-    </div>
-    <div class="extra-controls js-result">
-        Placeholder for some buttons to change slider behavior
-    </div>
-
-
-    h1
         form(action="/portfolioSaved", method="get" onsubmit="this.submit(); this.reset(); return false;")
             .form-group
                 textarea#eventDescription(cols="30", rows="4" name="eventDescription" placeholder="Description of Event")
             .form-group
                 input#button(type="submit", value="save")
+                
+
+    
+    .range-slider
+        input.js-range-slider(type='text', value='')
+    .extra-controls.js-result
+        | Placeholder for some buttons to change slider behavior
+
+        
 
         
                 
