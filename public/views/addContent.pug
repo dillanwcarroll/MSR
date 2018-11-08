@@ -1,0 +1,20 @@
+extends layout.pug
+
+prepend styles
+    link(rel="stylesheet", href="/styles/addContent.css")
+
+prepend scripts
+    //-script(src="/scripts/FILENAME.js")
+
+
+block content
+    //-CONTENT-STARTS-HERE-//
+
+    section#message
+        h2 Choose which slide type to add
+        form(action="/editSlideshow")
+            input(type="submit" value="Upload slide Image/PDF")
+        form(action="/editSlideshow")
+            input(type="submit" value="Embed slide Video")
+        form(action="/editSlideshow")
+            input(type="submit" value="Return to Editor")

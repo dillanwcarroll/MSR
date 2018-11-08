@@ -1,0 +1,74 @@
+extends layout.pug
+
+append styles
+    link(href='/styles/editSlideshow.css' rel='stylesheet')
+    link(href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet')
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/css/ion.rangeSlider.css' rel='stylesheet')
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/css/ion.rangeSlider.skinModern.css' rel='stylesheet')
+    
+prepend scripts
+    script(src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/js/ion.rangeSlider.js')
+    script(src='/scripts/editSlideshow.js')
+
+
+block content
+    head
+        meta(charset='utf-8')
+    title Get coordinates of the mouse pointer
+        meta(name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no')
+    section
+    
+    div#map
+        pre#info.
+    textarea#setCoordinates(cols="30", nrows="2" name="setCoordinates" placeholder="Click on map to set Coordinates")
+    .js-result
+        
+
+    #contentform
+        form(action="/addContent", method="get" onsubmit="this.submit(); this.reset(); return false;")
+                .form-group
+                    input#button(type="submit", value="add content")
+        form(action="/editSlideshow", method="get" onsubmit="this.submit(); this.reset(); return false;")
+            .form-group
+                input#button(type="submit", value="< prev slide")
+                input#button(type="submit", value="next slide >")
+                label(for="slideNo") Slide Number ## of ##
+        form(action="/portfolioSaved", method="get" onsubmit="this.submit(); this.reset(); return false;")
+            .form-group
+                textarea#eventDescription(cols="30", rows="4" name="eventDescription" placeholder="Description of Event")
+            .form-group
+                input#button(type="submit", value="save")
+            
+        
+                
+
+    
+    .range-slider
+        input.js-range-slider(type='text', value='')
+    .extra-controls
+        | Placeholder for some buttons to change slider behavior
+
+        
+
+        
+                
+            
+
+      
+
+    
+
+     
+
+
+
+
+    
+    
+    
+    
+    
+  
+

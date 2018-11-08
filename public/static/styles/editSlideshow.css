@@ -1,0 +1,129 @@
+section{
+    display: inline-block;
+    width: 100%;
+}
+
+body{
+    /* Grey background */
+    background-color: #d3d3d3;
+}
+
+.container{
+    display: inline-block;
+    max-width: none;
+    width: 100%;
+}
+
+#eventDescription{
+  width: 40%;
+  margin-left: 50%;
+}
+
+
+/* maps start */
+#map{ 
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    visibility: visible;
+    display: block;
+    height: 500px;
+    margin-left: 50px;
+    margin-right: 750px;
+}
+
+#info{
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin: 0px auto;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+    color: #222;
+    background: #fff;
+}
+/* maps end */
+/* range slider start */
+
+html {
+  height: 100%;
+}
+/* 
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 40px 40px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+} */
+
+.range-slider {
+  position: relative;
+  height: 80px;
+  width: 60%;
+  margin-left: 70px;
+}
+
+.extra-controls {
+    position: relative;
+    border-top: 3px solid #000;
+    padding: 10px 0 0;
+}
+
+.js-result {
+  display: inline-block;
+  margin-left: 5%;
+  font-size: 50px;
+}
+/* range slider end */
+/* borrowed contact begin */
+
+section{
+  display: inline-block;
+  width: 100%;
+}
+
+input{
+  font-size: 16px;
+  width: 100%;
+  height: 30px;
+}
+
+textarea{
+  width: 800px;
+  border: none;
+  box-shadow: 0px 1px 3px #919191; 
+  outline: none;
+  text-align: center;
+  margin-left: 7%;
+}
+
+input[type="submit"]{
+  width:25%;
+  margin-left: 50%;
+}
+
+/* contact end */
+/* add content */
+
+#contentform{
+  display: inline-block;
+  position: absolute;
+  top: 416px;
+  right: 190px;
+  width: 50%;
+  height: 10px;
+}
+
+#setCoordinates{
+  width: 26%;
+  margin-left: 525px;
+}
+
+
+

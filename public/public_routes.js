@@ -22,6 +22,14 @@ router.get('/messageSent', (req, res) => {
     res.render('messageSent')
 })
 
+router.get('/portfolioSaved', (req, res) => {
+    res.render('portfolioSaved')
+})
+
+router.get('/addContent', (req, res) => {
+    res.render('addContent')
+})
+
 router.get('/login', (req, res) => {
     res.render('login')
 })
@@ -88,4 +96,8 @@ router.get('/search', (req, res) => {
             completeQuery({aifResult: listings})
         }
     })
+})
+
+router.get('/editSlideshow', (req, res) => {
+    res.render('editSlideshow')
 })
