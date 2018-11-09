@@ -23,10 +23,10 @@ router.post('/login', (req, res) => {
 
     dataAccess.studentlogin(req.body,() =>{
 
-    if (req.body.form_username == "JSD" && req.body.form_password == "JSD123")
+    if (req.body.form_username == "1" && req.body.form_password == "1")
     {
-            
-            res.render('student_dashboard')
+        
+        res.redirect('/student_dashboard');
     }
     else
     {
@@ -38,6 +38,7 @@ router.post('/login', (req, res) => {
    // res.render('about')
     
 })
+
 router.get('/contact', (req, res) => {
     res.render('contact')
 })
