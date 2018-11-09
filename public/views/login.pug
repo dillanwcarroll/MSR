@@ -15,14 +15,16 @@ block content
     body
         section
             h1 Login Below
-            form(method='', action='')   
-                label.labelE(style='font-weight:bold') Login Code
-                //-email box below-//
-                input.email(type='email', name='email', placeholder='') 
-                
-                label.labelP(style='font-weight:bold') Password
-                //-password box -//
-                input#password.password(type='password', name='password', placeholder='')
+            form.form(method='post', action='/login')
+                div#params
+                    .param.username 
+                        label.labelE(style='font-weight:bold') Login Code
+                        //-email box below-//
+                        input.email(type='text', name='form_username', placeholder='') 
+                    .param.password                
+                        label.labelP(style='font-weight:bold') Password
+                        //-password box -//
+                        input#password.password(type='password', name='form_password', placeholder='')
                 //-<i class="fas fa-eye btn-show-hide-pwd"></i>
                 i#btn-show-hide-pwd(class="fas fa-eye btn-show-hide-pwd", data-for="password")
                 //-login button-//

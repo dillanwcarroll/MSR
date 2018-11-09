@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-
+var bodyParser = require('body-parser');
 //Setup
 app.set('view engine', 'pug')
 app.set('views', __dirname + '\\public\\views')

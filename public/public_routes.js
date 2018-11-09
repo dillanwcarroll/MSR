@@ -13,6 +13,28 @@ router.get('/', (req, res) => {
 router.get('/about', (req, res) => {
     res.render('about')
 })
+router.post('/login', (req, res) => {
+    console.log("--------------------");
+    //params.rusername = req.body.form_username;
+    //params.rpassword = req.body.form_password;
+    //console.log(params.rusername);
+    //console.log(params.rpassword);
+
+dataAccess.studentlogin(req.body,() =>{
+if (req.body.form_username == "JSD" && req.body.form_password == "JSD123")
+{
+        // var paramsCall = {
+        //  username: req.body.form_username || '',
+        //ghuyguyguy  password: req.body.form_password || ''
+        // }
+        res.render('about')
+}
+else
+{
+    console.log("Login Failed");
+    res.render('index')
+}
+})
 
 router.get('/contact', (req, res) => {
     res.render('contact')
@@ -104,4 +126,5 @@ router.get('/search', (req, res) => {
 
 router.get('/editSlideshow', (req, res) => {
     res.render('editSlideshow')
+})
 })
