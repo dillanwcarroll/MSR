@@ -1,0 +1,32 @@
+extends layout.pug
+
+append styles
+    link(rel="stylesheet", href="/styles/student_dashboard.css")
+prepend scripts
+    script(src="/scripts/public_routes.js")
+
+block content
+    //-CONTENT-STARTS-HERE-//
+    body  
+        d.row
+            d.column
+                h2.welcome Welcome, you have been assigned: 
+                
+                section
+                    a.basic(type="submit", class="button", href="/") Edit Basic Information
+
+                section
+                    a.slides(type="submit", class="button", href="/") Edit Slides Information
+
+                section
+                    a.submit(type="submit", class="button", href="") Submit (Not in this release)
+
+                section
+                    a.logout(type="submit", class="button", href="/") Log Out
+        
+            d.column
+
+                h2.vetName Veteran Name will go here...
+                
+                section
+                    img.picture(src="/assets/Portrait_Placeholder.png", alt="")
