@@ -1,5 +1,6 @@
 const Connection = require('tedious').Connection;
-var Request = require('tedious').Request;
+var Request = require('tedious').Request;	
+var bodyParser = require('body-parser');
 
 var config = {
     userName: 'dillan',
