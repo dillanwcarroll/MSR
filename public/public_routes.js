@@ -55,7 +55,11 @@ router.get('/privacy', (req, res) => {
 
 router.get("/basicInfo", (req, res) => {
     res.render("basicInfo");
-  });
+});
+
+router.get("/student_dashboard", (req, res) => {
+    res.render("student_dashboard");
+});
 
 router.get('/portfolio/:id', (req, res) => {
         dataAccess.getPortfolioByID(req.params.id, (result)=>{completeQuery({portfolio: result})})
