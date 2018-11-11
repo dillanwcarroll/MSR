@@ -114,15 +114,16 @@ input[type="submit"]{
 #contentform{
   display: inline-block;
   position: absolute;
-  top: 416px;
+  top: 340px;
   right: 190px;
   width: 50%;
   height: 10px;
+  line-height: 1.9cm;
 }
 
 #setCoordinates{
   width: 26%;
-  margin-left: 525px;
+  margin-left: 320px;
 }
 
 
