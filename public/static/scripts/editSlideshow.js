@@ -48,8 +48,13 @@
       }
   });
 
+  //Test, recieve coordinates for slide
+  const dataAccess = require(__dirname + '/data_access')
 
+  dataAccess.getCoordinates(req.body,() =>{
+    $result
 
+    })
 
   // <---- button script ---->           button(onclick='something()') Click
   // var something = function() {

@@ -89,11 +89,19 @@ let studentlogin = (params, callback) => {
     DatabaseRequest(query, callback)
 }
 
+let getCoordinates = (callback) =>{
+    var query = 'SELECT SlideID, LocationCords FROM Portfolio WHERE SlideID = 1 AND WHERE Year = ${input_slider}'
+    DatabaseRequest(query, callback)
+}
+
+// UPDATE Slide  SET SlideID=1 WHERE LocationCords='1,1'
+
 module.exports = {
     getPortfolioByID: getPortfolioByID,
     getSlidesByID: getSlidesByID,
     getMediaByID: getMediaByID,
     getAllPortfolios: getAllPortfolios,
     portfolioSearch: portfolioSearch,
-    studentlogin: studentlogin
+    studentlogin: studentlogin,
+    getCoordinates: getCoordinates
 }
