@@ -23,29 +23,55 @@
   });
 
   // define a lookup for what text should be displayed for each value in your range
-  var $range = $(".js-range-slider");
-  var $result = $(".js-result");
-  
-  var rangeValues = [0, 100, 200, 300, 999];
-  var rangeValues_p = ["Slideshow 1", "1900", "1901", "1902", "1903"];
-  
+  var $range = $(".js-range-slider"),
+  $inputMin = $(".js-input-min"),
+  $inputMax = $(".js-input-max"),
+  instance,
+  min = 1850,
+  max = 2010,
+  $result = $(".js-result");
+
   $range.ionRangeSlider({
-      type: "single",
-      min: 1850,
-      max: 2010,
-      step: 1,
-      grid: true,
-      values: rangeValues,
-      prettify: function (n) {
-        var ind = rangeValues.indexOf(n);
-        return rangeValues_p[ind];
-      },
-      onStart: function(data) {
-      $result.text(data.from_value);
-      },
-      onChange: function(data) {
-      $result.text(data.from_value);
-      }
+    type: "single",
+    min: min,
+    max: max,
+    from: 500,
+    onStart: function(data) {
+    $result.text(data.from);
+    },
+    onChange: function(data) {
+    $result.text(data.from);
+    }
+  });
+
+  instance = $range.data("ionRangeSlider");
+
+  $inputMin.on("change keyup", function () {
+    var val = $(this).prop("value");
+    
+    // validate
+    if (val > max) {
+        val = max;
+    }
+    
+    min = val;
+    instance.update({
+        min: val
+    });
+  });
+
+  $inputMax.on("change keyup", function () {
+    var val = $(this).prop("value");
+    
+    // validate
+    if (val < min) {
+        val = min;
+    }
+    
+    max = val;
+    instance.update({
+        max: val
+    });
   });
 
   //Test, recieve coordinates for slide

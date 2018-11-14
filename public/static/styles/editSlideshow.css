@@ -3,10 +3,9 @@ section{
     width: 100%;
 }
 
-body{
-    /* Grey background */
+/* body{
     background-color: #d3d3d3;
-}
+} */
 
 .container{
     display: inline-block;
@@ -18,7 +17,6 @@ body{
   width: 40%;
   margin-left: 50%;
 }
-
 
 /* maps start */
 #map{ 
@@ -48,32 +46,24 @@ body{
     background: #fff;
 }
 /* maps end */
-/* range slider start */
 
+/* range slider start */
 html {
   height: 100%;
 }
-/* 
-body {
-  height: 100%;
-  overflow: hidden;
-  margin: 40px 40px;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-} */
 
 .range-slider {
   position: relative;
   height: 80px;
-  width: 60%;
-  margin-left: 70px;
+  width: 57.5%;
+  margin-left: 60px;
 }
 
-.extra-controls {
+/* .extra-controls {
     position: relative;
     border-top: 3px solid #000;
     padding: 10px 0 0;
-}
+} */
 
 .js-result {
   display: inline-block;
@@ -123,7 +113,7 @@ input[type="submit"]{
 
 #setCoordinates{
   width: 26%;
-  margin-left: 320px;
+  margin-left: 330px;
 }
 
 
