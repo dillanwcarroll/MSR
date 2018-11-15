@@ -16,27 +16,27 @@ router.get('/about', (req, res) => {
 
 router.post('/login', (req, res) => {
     console.log("--------------------");
-    //params.rusername = req.body.form_username;
-    //params.rpassword = req.body.form_password;
-    //console.log(params.rusername);
-    //console.log(params.rpassword);
 
-    dataAccess.studentlogin(req.body,() =>{
+    dataAccess.studentlogin(req.body, (results) =>{
 
-    if (req.body.form_username == "JSD" && req.body.form_password == "JSD123")
-    {
+        resultFound = false;
+        if(results.length > 0)
+        {
+            if (req.body.form_username == results[0].Username && req.body.form_password == results[0].Password)
+            {
+                console.log("Login is fookin successful!")
+                res.render('student_dashboard');
+                resultFound = true;
+            }
+        }
         
-        res.redirect('/student_dashboard');
-    }
-    else
-    {
-        console.log("Login Failed");
-        res.render('index')
-    }
-    })
 
-   // res.render('about')
-    
+        if(!resultFound)
+        {
+            console.log("Login Failed");
+            res.render('index')
+        }
+    })
 })
 
 router.get('/contact', (req, res) => {
@@ -59,15 +59,6 @@ router.get('/login', (req, res) => {
     res.render('login')
 })
 
-//router.post('/login', (req, res) => {
-  //  console.log("login");
-    /*res.render('about')
-    var params = {
-        username: req.query.username || '',
-        password: req.query.password || ''
-    }
-    dataAccess.studentlogin(params, (response) =>{completeQuery({studentlogin: response})})*/
-//}) 
 
 router.get('/teacherlogin', (req, res) => {
     res.render('teacherlogin')

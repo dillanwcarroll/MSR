@@ -84,9 +84,8 @@ let portfolioSearch = (params, callback) => {
 }
 
 let studentlogin = (params, callback) => {
-
-    var query = `SELECT Username, Password FROM Portfolio WHERE Username = ${params.form_username} AND WHERE Password = ${params.form_password}`
-    DatabaseRequest(query, callback)
+    var query = `SELECT Username, Password FROM Portfolio WHERE Username = '${params.form_username}' AND Password = '${params.form_password}'`
+    DatabaseRequest(query, callback)    
 }
 
 module.exports = {
