@@ -1,9 +1,23 @@
-const express = require('express')
+var express = require('express')
+var multer = require('multer')
 const dataAccess = require(__dirname + '/data_access')
-const router = express.Router()
+var router = express.Router()
+// var storage = multer.memoryStorage();
+// var upload = multer({storage: storage})
+// you can get the buffer from command like req.files[0].buffer
 
+var storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, "public/static/uploads/");
+    },
+    filename: function(req, file, cb) {
+        cb(null, file.originalname);
+        //+ '-' + Date.now()
+    }
+});
 
-module.exports = router
+var upload = multer({ storage: storage })
+//var upload = multer({ storage: storage })
 
 //routes
 router.get('/', (req, res) => {
@@ -53,6 +67,11 @@ router.get('/portfolioSaved', (req, res) => {
 
 router.get('/addContent', (req, res) => {
     res.render('addContent')
+})
+
+router.post('/addContent', upload.single('upload'), (req, res) => {
+    res.render('addContent')
+    console.log("File upload sucessfully.");
 })
 
 router.get('/login', (req, res) => {
@@ -148,3 +167,5 @@ router.get('/search', (req, res) => {
 router.get('/editSlideshow', (req, res) => {
     res.render('editSlideshow')
 })
+
+module.exports = router

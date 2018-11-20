@@ -28,3 +28,27 @@ input:hover{
     background-color:#EDC881;
     transition: background-color .3s;
 }
+
+.img{
+    display: block;
+    height: 70%;
+    width: 40%;
+    margin-top: 60px;
+}
+
+.divider{
+    margin-top: 10%;
+}
+
+.select{
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    height: 100%;
+    width: 55%;
+    color: black;
+}
+
+/* input[name=uploadfile] {    
+    
+}     */

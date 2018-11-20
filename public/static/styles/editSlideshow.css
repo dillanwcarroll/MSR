@@ -25,9 +25,12 @@ section{
     margin-bottom: 7px;
     visibility: visible;
     display: block;
-    height: 500px;
+    height: 520px;
     margin-left: 50px;
     margin-right: 750px;
+    position: relative;
+    bottom: 60px;
+    width: 60%;
 }
 
 #info{
@@ -55,7 +58,7 @@ html {
 .range-slider {
   position: relative;
   height: 80px;
-  width: 57.5%;
+  width: 60%;
   margin-left: 60px;
 }
 
@@ -104,7 +107,7 @@ input[type="submit"]{
 #contentform{
   display: inline-block;
   position: absolute;
-  top: 340px;
+  top: 360px;
   right: 190px;
   width: 50%;
   height: 10px;
