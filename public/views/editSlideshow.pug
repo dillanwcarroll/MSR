@@ -29,26 +29,24 @@ block content
     #contentform
         form(action="/addContent", method="get" onsubmit="this.submit(); this.reset(); return false;")
                 .form-group
-                    input#button(type="submit", value="add content")
+                    input#button(type="submit", value="add/edit content")
         form(action="/editSlideshow", method="get" onsubmit="this.submit(); this.reset(); return false;")
             .form-group
-                input#button(type="submit", value="< prev slide")
-                input#button(type="submit", value="next slide >")
+                input#button(type="submit", value="< slide")
+                input#button(type="submit", value="slide >")
                 label(for="slideNo") Slide Number ## of ##
         form(action="/portfolioSaved", method="get" onsubmit="this.submit(); this.reset(); return false;")
             .form-group
                 textarea#eventDescription(cols="30", rows="4" name="eventDescription" placeholder="Description of Event")
             .form-group
                 input#button(type="submit", value="save")
-            
-        
-                
-
+                label  Inserts coords, desc on year
     
     .range-slider
-        input.js-range-slider(type='text', value='')
-    .extra-controls
-        | Placeholder for some buttons to change slider behavior
+        input.js-range-slider(type='text', value='', name='input_slider')
+    //- .extra-controls
+    //-     input.extra-controls(type='text', class='js-input-min', value='1850')
+    //-     input.extra-controls(type='text', class='js-input-max', value='2010')
 
         
 

@@ -1,6 +1,6 @@
 const Connection = require('tedious').Connection;
 var Request = require('tedious').Request;	
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
 var config = {
     userName: 'dillan',
@@ -88,11 +88,23 @@ let studentlogin = (params, callback) => {
     DatabaseRequest(query, callback)    
 }
 
+let getCoordinates = (map, callback) =>{
+    DatabaseRequest(`SELECT LocationCords FROM Portfolio WHERE SlideID = 1 AND WHERE Year = ${js-result}`, callback)  
+}
+
+let newCoordinates = (callback) =>{ 
+    var query = `INSERT INTO Portfolio (LocationCords) VALUES (${params.form_coords}) WHERE SlideID = 4 AND WHERE Year = ${input_slider}`
+    DatabaseRequest(query, callback)  
+}
+// AND WHERE Year = ${input_slider}"
+// UPDATE Slide  SET SlideID=1 WHERE LocationCords='1,1'
+
 module.exports = {
     getPortfolioByID: getPortfolioByID,
     getSlidesByID: getSlidesByID,
     getMediaByID: getMediaByID,
     getAllPortfolios: getAllPortfolios,
     portfolioSearch: portfolioSearch,
-    studentlogin: studentlogin
+    studentlogin: studentlogin,
+    getCoordinates: getCoordinates
 }

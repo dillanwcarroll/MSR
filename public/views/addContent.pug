@@ -9,12 +9,19 @@ prepend scripts
 
 block content
     //-CONTENT-STARTS-HERE-//
+    
+    section.img
+        //- img.box-shadow(src='/assets/Portrait_Placeholder.png', alt='')
+        label(for='.img') Some files may be unsupported
+        form(method='post', enctype='multipart/form-data')
+            input.select(type='file', name='upload')
+            input(type='submit', name='uploadfile', value='Upload selected file')
+        form(action="/editSlideshow")
+            input(type="submit" value="Embed slide Video").divider
+        form(action="/editSlideshow")
+            input(type="submit" value="Return to Editor").divider
 
     section#message
-        h2 Choose which slide type to add
-        form(action="/editSlideshow")
-            input(type="submit" value="Upload slide Image/PDF")
-        form(action="/editSlideshow")
-            input(type="submit" value="Embed slide Video")
-        form(action="/editSlideshow")
-            input(type="submit" value="Return to Editor")
+        h2 
+        
+

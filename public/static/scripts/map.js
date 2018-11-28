@@ -1,9 +1,9 @@
 var cords = [145.03411259518066, -37.82879306920354];
 
-mapboxgl.accessToken = 'pk.eyJ1IjoidHJpZ2VucGFuaW5pIiwiYSI6ImNqbDV0NXU3NjJxZTAzcnF0aWdlc3B3ZG4ifQ.emMb8nYj7XXUg70EaBVZ7g';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGlsbGFuY2Fycm9sbCIsImEiOiJjam9wYjRuem0wNDcwM3BvMmdtaDY3YzFrIn0.onGoqBFswgttQMptrz17Uw';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/trigenpanini/cjl5yll0308l82qqktmirrjcy',
+    style: 'mapbox://styles/dillancarroll/cjopb6fzga2072sohtvc3tpur',
     center: JSON.parse(slides[0].LocationCords),
     zoom: 3.0
 });
